@@ -57,7 +57,7 @@ namespace POP_31
                 Akcija = null,
                 Sifra = "SF123",
                 TipNamestaja = sofaTipNamestaj
-
+                s
             });
             */
 
