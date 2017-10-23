@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace POP_31.Model
 {
+    [Serializable]
+
+
     public class Akcija
     {
         public int Id { get; set; }
@@ -14,9 +17,9 @@ namespace POP_31.Model
 
         public DateTime DatumZavrsetka { get; set; }
 
-        public string NamestajNaPopustu { get; set; }
-
-        public double Popust { get; set; }
+       
+        
+        public decimal Popust { get; set; }
 
 
         public bool Obrisan { get; set; }

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace POP_31.Model
 {
+    [Serializable]
+
     public class Salon
     {
 
@@ -28,5 +30,9 @@ namespace POP_31.Model
         public int MaticniBroj { get; set; }
 
         public string BrojZiroRacuna { get; set; }
-}
+        
+
+
+        
+    }
 }

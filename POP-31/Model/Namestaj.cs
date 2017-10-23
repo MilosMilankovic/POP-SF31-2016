@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace POP_31.Model
 {
+    [Serializable]
+
     public class Namestaj
     {
-
-        public string Id { get; set; }
+        
+        public int Id { get; set; }
 
         public string Naziv { get; set; }
 
@@ -21,9 +23,9 @@ namespace POP_31.Model
 
         public TipNamestaja TipNamestaja{ get; set; }
 
+        public Akcija Akcija { get; set; }
 
-
-        public bool Obrisan { get; set; }
+         public bool Obrisan { get; set; }
 
 
     }

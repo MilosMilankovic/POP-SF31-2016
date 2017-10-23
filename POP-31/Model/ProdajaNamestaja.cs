@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace POP_31.Model
 {
+    [Serializable]
+
     public class ProdajaNamestaja
     {
 
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         public List<Namestaj> NamestajZaProdaju { get; set; }
 
@@ -19,11 +21,13 @@ namespace POP_31.Model
 
         public string Kupac { get; set; }
 
-        public double PDV { get; set; }
+        public const double PDV = 0.02;
 
         public List<DodatnaUsluga> DodatnaUsluga { get; set; }
 
         public double UkupanIznos { get; set; }
+
+        public Akcija Akcija { get; set; }
 
 
 

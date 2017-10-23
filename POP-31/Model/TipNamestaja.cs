@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace POP_31.Model
 {
+    [Serializable]
+
     public  class TipNamestaja
     {
 
@@ -13,7 +15,17 @@ namespace POP_31.Model
 
         public string Naziv { get; set; }
 
+        public TipNamestaja(int Id,string Naziv,bool Obrisan)
+        {
+            this.Id = Id;
+            this.Naziv = Naziv;
+            this.Obrisan = Obrisan;
+        }
 
+        public TipNamestaja()
+        {
+
+        }
 
         public bool Obrisan { get; set; }
     }

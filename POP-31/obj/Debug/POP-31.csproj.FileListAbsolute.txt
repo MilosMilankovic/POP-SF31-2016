@@ -1,0 +1,7 @@
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\POP-31\obj\Debug\POP-31.csprojResolveAssemblyReference.cache
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\POP-31\obj\Debug\POP-31.csproj.CoreCompileInputs.cache
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\POP-31\bin\Debug\POP-31.exe.config
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\POP-31\bin\Debug\POP-31.exe
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\POP-31\bin\Debug\POP-31.pdb
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\POP-31\obj\Debug\POP-31.exe
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\POP-31\obj\Debug\POP-31.pdb

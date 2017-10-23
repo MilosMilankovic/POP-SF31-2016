@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace POP_31.Model
 {
+    [Serializable]
+
     public enum TipKorisnika
     {
         Administrator,
