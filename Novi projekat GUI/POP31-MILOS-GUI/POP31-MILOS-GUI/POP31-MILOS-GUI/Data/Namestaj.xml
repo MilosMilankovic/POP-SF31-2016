@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfNamestaj xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namestaj>
+    <Obrisan>false</Obrisan>
+    <Id>3</Id>
+    <Naziv>1111</Naziv>
+    <JedinicnaCena>3232</JedinicnaCena>
+    <KolicinaUmagacinu>3</KolicinaUmagacinu>
+    <Sifra>2</Sifra>
+    <TipNamestaja>
+      <naziv>Sto</naziv>
+      <Id>1</Id>
+      <Naziv>Sto</Naziv>
+    </TipNamestaja>
+  </Namestaj>
+  <Namestaj>
+    <Obrisan>false</Obrisan>
+    <Id>4</Id>
+    <Naziv>Kuhinjski sto</Naziv>
+    <JedinicnaCena>2000</JedinicnaCena>
+    <KolicinaUmagacinu>2</KolicinaUmagacinu>
+    <Sifra>stoo11</Sifra>
+    <TipNamestaja>
+      <naziv>Sto</naziv>
+      <Id>1</Id>
+      <Naziv>Sto</Naziv>
+    </TipNamestaja>
+  </Namestaj>
+  <Namestaj>
+    <Obrisan>false</Obrisan>
+    <Id>5</Id>
+    <Naziv>Decji orman</Naziv>
+    <JedinicnaCena>4000</JedinicnaCena>
+    <KolicinaUmagacinu>4</KolicinaUmagacinu>
+    <Sifra>orman1</Sifra>
+    <TipNamestaja>
+      <naziv>Orman</naziv>
+      <Id>3</Id>
+      <Naziv>Orman</Naziv>
+    </TipNamestaja>
+  </Namestaj>
+  <Namestaj>
+    <Obrisan>false</Obrisan>
+    <Id>6</Id>
+    <Naziv>Polica za knjige</Naziv>
+    <JedinicnaCena>1400</JedinicnaCena>
+    <KolicinaUmagacinu>5</KolicinaUmagacinu>
+    <Sifra>polica1</Sifra>
+    <TipNamestaja>
+      <naziv>Polica</naziv>
+      <Id>2</Id>
+      <Naziv>Polica</Naziv>
+    </TipNamestaja>
+  </Namestaj>
+</ArrayOfNamestaj>
