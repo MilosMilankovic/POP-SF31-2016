@@ -28,19 +28,6 @@
   </Namestaj>
   <Namestaj>
     <Obrisan>false</Obrisan>
-    <Id>5</Id>
-    <Naziv>Decji orman</Naziv>
-    <JedinicnaCena>4000</JedinicnaCena>
-    <KolicinaUmagacinu>4</KolicinaUmagacinu>
-    <Sifra>orman1</Sifra>
-    <TipNamestaja>
-      <naziv>Orman</naziv>
-      <Id>3</Id>
-      <Naziv>Orman</Naziv>
-    </TipNamestaja>
-  </Namestaj>
-  <Namestaj>
-    <Obrisan>false</Obrisan>
     <Id>6</Id>
     <Naziv>Polica za knjige</Naziv>
     <JedinicnaCena>1400</JedinicnaCena>
@@ -50,6 +37,19 @@
       <naziv>Polica</naziv>
       <Id>2</Id>
       <Naziv>Polica</Naziv>
+    </TipNamestaja>
+  </Namestaj>
+  <Namestaj>
+    <Obrisan>false</Obrisan>
+    <Id>5</Id>
+    <Naziv>Decji orman</Naziv>
+    <JedinicnaCena>20000</JedinicnaCena>
+    <KolicinaUmagacinu>2</KolicinaUmagacinu>
+    <Sifra>orman1</Sifra>
+    <TipNamestaja>
+      <naziv>Orman</naziv>
+      <Id>3</Id>
+      <Naziv>Orman</Naziv>
     </TipNamestaja>
   </Namestaj>
 </ArrayOfNamestaj>

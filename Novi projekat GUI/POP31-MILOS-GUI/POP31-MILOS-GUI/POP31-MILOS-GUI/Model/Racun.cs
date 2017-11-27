@@ -8,7 +8,7 @@ namespace POP_31.Model
 {
     [Serializable]
 
-    public class ProdajaNamestaja
+    public class Racun
     {
 
         public int Id { get; set; }

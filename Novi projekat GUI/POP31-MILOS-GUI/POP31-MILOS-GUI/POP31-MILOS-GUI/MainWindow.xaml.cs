@@ -23,19 +23,42 @@ namespace POP31_MILOS_GUI
  // da izmene upise u xml
 
     public partial class MainWindow : Window
+
     {
+
+
+
+        /*
         public static ObservableCollection<Namestaj> lista;
         public static ObservableCollection<TipNamestaja> tipNamLista;
+        */ //da se izbaci static
         public MainWindow()
         {
 
             InitializeComponent();
+            
+            view = CollectionViewSource.GetDefaultView(Projekat.Instance.Namestaj);
+            view.Filter = NamestajFilter;
+            dgNamestaj.ItemSource = view; //dgMainwindo
+            dgNamestaj.issyncronizedWithcurrentitems = true;
+
+            dgNamestaj.ColumnWidth = new DataGridLength(1, DataGridLengthUnitType.Star);
+
+        } 
+
+        private bool NamestajFilter(object obj)
+        {
+            return ((Namestaj)obj).Obrisan == false;
+        
+        */
+
+            /*
             lista = new ObservableCollection<Namestaj>();
             lista= Projekat.Instance.Namestaj;
             tipNamLista = new ObservableCollection<TipNamestaja>();
             tipNamLista = GenericSerializer.Deserialize<TipNamestaja>("tipoviNamestaja.xml");
             dataGr.ItemsSource = lista;
-
+            */
 
 
         }
@@ -72,6 +95,7 @@ namespace POP31_MILOS_GUI
                         if (nam.Id == n.Id)
                         {
                             MainWindow.lista.Remove(nam);
+                            //view.Refresh();
                             break;
                         }
                     }
@@ -84,7 +108,17 @@ namespace POP31_MILOS_GUI
                 MessageBox.Show("Niste selektovali sta hocete da obrisete!");
                 
             }
+       
+        private void dgPrikaz_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+            {
+                if ((string)e.Column.Header == 'ID') //da izbacimo kolonu koja nam ne treba
+                {
+                    e.Cancel = true;
+                }
+            }
+        
         }
+            
 
     }
 }
