@@ -1,0 +1,122 @@
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.g.cs
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\App.g.cs
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.cache
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.lref
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe.config
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.pdb
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.baml
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.g.resources
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31_MILOS_GUI.Properties.Resources.resources
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csproj.GenerateResource.Cache
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csproj.CoreCompileInputs.cache
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.exe
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.pdb
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.g.cs
+C:\Users\koOoomp\Desktop\Projekat ovdjeee\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.baml
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe.config
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.exe
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.pdb
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.pdb
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.g.cs
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.g.cs
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\App.g.cs
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.cache
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.lref
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.baml
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.baml
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.g.resources
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31_MILOS_GUI.Properties.Resources.resources
+D:\Projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csproj.GenerateResource.Cache
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe.config
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.pdb
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csprojResolveAssemblyReference.cache
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.g.cs
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.g.cs
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\App.g.cs
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.cache
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.lref
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.baml
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.baml
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.g.resources
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31_MILOS_GUI.Properties.Resources.resources
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csproj.GenerateResource.Cache
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.exe
+C:\Users\Drasko\Desktop\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.pdb
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe.config
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.pdb
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.g.cs
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.g.cs
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\App.g.cs
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.cache
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.lref
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.baml
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.baml
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.g.resources
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31_MILOS_GUI.Properties.Resources.resources
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csproj.GenerateResource.Cache
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csproj.CoreCompileInputs.cache
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.exe
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.pdb
+C:\Users\koOoomp\Desktop\DraskoProjekat\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csprojResolveAssemblyReference.cache
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe.config
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.pdb
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.g.cs
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.g.cs
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\LogInWindow.g.cs
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\App.g.cs
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.cache
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.lref
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.baml
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.baml
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\LogInWindow.baml
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.g.resources
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31_MILOS_GUI.Properties.Resources.resources
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csproj.GenerateResource.Cache
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csproj.CoreCompileInputs.cache
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.exe
+C:\Users\koOoomp\Desktop\DraskoComboBox\MilosProjekat\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.pdb
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe.config
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.pdb
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.g.cs
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.g.cs
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\LogInWindow.g.cs
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\App.g.cs
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.cache
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.lref
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.baml
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.baml
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\LogInWindow.baml
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.g.resources
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31_MILOS_GUI.Properties.Resources.resources
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csproj.GenerateResource.Cache
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csproj.CoreCompileInputs.cache
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.exe
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.pdb
+C:\Users\koOoomp\Desktop\POP\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csprojResolveAssemblyReference.cache
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe.config
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.pdb
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.g.cs
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.g.cs
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\LogInWindow.g.cs
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\App.g.cs
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.cache
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_MarkupCompile.lref
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\MainWindow.baml
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.baml
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\LogInWindow.baml
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.g.resources
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31_MILOS_GUI.Properties.Resources.resources
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csproj.GenerateResource.Cache
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csproj.CoreCompileInputs.cache
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.exe
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.pdb
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\TicketWindow.g.cs
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\TicketWindow.baml
+C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csprojResolveAssemblyReference.cache

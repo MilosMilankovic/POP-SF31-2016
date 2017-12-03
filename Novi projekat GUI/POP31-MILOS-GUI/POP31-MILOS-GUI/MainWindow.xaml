@@ -1,0 +1,21 @@
+﻿<Window x:Class="POP31_MILOS_GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POP31_MILOS_GUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="380" Width="525" Background="Aquamarine">
+    <Grid>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="47,248,0,0" VerticalAlignment="Top" Width="97" Height="26" Click="Dodaj"/>
+        <DataGrid  Visibility="Visible" ColumnWidth="123" AutoGeneratingColumn="Prikaz_AutoGeneratingColumn" AutoGenerateColumns="True" CanUserAddRows="False" Name="dataGr" HorizontalAlignment="Left" Height="188" Margin="10,23,0,0" VerticalAlignment="Top" Width="498">
+
+        </DataGrid>
+        <Button Content="Izmeni" HorizontalAlignment="Left" Margin="175,248,0,0" VerticalAlignment="Top" Width="75" Height="26" Click="Izmeni"/>
+        <Button Content="Obrisi" HorizontalAlignment="Left" Margin="283,248,0,0" VerticalAlignment="Top" Width="90" Height="26" Click="Obrisi"/>
+        <Button Content="Racun" HorizontalAlignment="Left" Margin="407,248,0,0" VerticalAlignment="Top" Width="81" Height="26" Click="Racun"/>
+        <Button Content="Zatvori" HorizontalAlignment="Left" Margin="407,301,0,0" VerticalAlignment="Top" Width="81" Height="39" Click="Zatvori"/>
+
+
+    </Grid>
+</Window>
