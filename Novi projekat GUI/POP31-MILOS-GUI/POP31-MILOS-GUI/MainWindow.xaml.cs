@@ -19,8 +19,7 @@ using System.Windows.Shapes;
 
 namespace POP31_MILOS_GUI
 {
- // da izbaci tip namestaja kad se otvori izmjena i dodavanje
- // da izmene upise u xml
+
 
     public partial class MainWindow : Window
     {
@@ -28,13 +27,17 @@ namespace POP31_MILOS_GUI
         public static ObservableCollection<TipNamestaja> tipNamLista;
         public MainWindow()
         {
-
+            
+            
             InitializeComponent();
             lista = new ObservableCollection<Namestaj>();
             lista= Projekat.Instance.Namestaj;
             tipNamLista = new ObservableCollection<TipNamestaja>();
             tipNamLista = GenericSerializer.Deserialize<TipNamestaja>("tipoviNamestaja.xml");
             dataGr.ItemsSource = lista;
+
+
+
 
 
 

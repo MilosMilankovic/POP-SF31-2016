@@ -13,9 +13,11 @@ namespace POP_31.Model
         public static Projekat Instance { get; private set; } = new Projekat();
 
         public ObservableCollection<Namestaj> Namestaj;
+        public ObservableCollection<TipNamestaja> TipNamestaja;
         public Projekat()
         {
             Namestaj = new ObservableCollection<Namestaj>(GenericSerializer.Deserialize<Namestaj>("Namestaj.xml"));
+            TipNamestaja = new TipNamestaja.GetAll();
         }
     }
 }

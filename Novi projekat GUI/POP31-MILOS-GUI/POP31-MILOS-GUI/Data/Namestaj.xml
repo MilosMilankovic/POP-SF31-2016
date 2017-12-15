@@ -5,7 +5,7 @@
     <Id>5</Id>
     <Naziv>Decji orman</Naziv>
     <JedinicnaCena>4000</JedinicnaCena>
-    <KolicinaUmagacinu>24</KolicinaUmagacinu>
+    <KolicinaUmagacinu>23</KolicinaUmagacinu>
     <Sifra>orman1</Sifra>
     <TipNamestaja>
       <naziv>Orman</naziv>
@@ -15,28 +15,28 @@
   </Namestaj>
   <Namestaj>
     <Obrisan>false</Obrisan>
-    <Id>4</Id>
+    <Id>2</Id>
+    <Naziv>Polica za knjige</Naziv>
+    <JedinicnaCena>2000</JedinicnaCena>
+    <KolicinaUmagacinu>3</KolicinaUmagacinu>
+    <Sifra>polica1</Sifra>
+    <TipNamestaja>
+      <naziv>Polica</naziv>
+      <Id>2</Id>
+      <Naziv>Polica</Naziv>
+    </TipNamestaja>
+  </Namestaj>
+  <Namestaj>
+    <Obrisan>false</Obrisan>
+    <Id>3</Id>
     <Naziv>Kuhinjski sto</Naziv>
-    <JedinicnaCena>9000</JedinicnaCena>
+    <JedinicnaCena>7000</JedinicnaCena>
     <KolicinaUmagacinu>3</KolicinaUmagacinu>
     <Sifra>sto1</Sifra>
     <TipNamestaja>
       <naziv>Sto</naziv>
       <Id>1</Id>
       <Naziv>Sto</Naziv>
-    </TipNamestaja>
-  </Namestaj>
-  <Namestaj>
-    <Obrisan>false</Obrisan>
-    <Id>4</Id>
-    <Naziv>Polica za knjige</Naziv>
-    <JedinicnaCena>3000</JedinicnaCena>
-    <KolicinaUmagacinu>6</KolicinaUmagacinu>
-    <Sifra>polica1</Sifra>
-    <TipNamestaja>
-      <naziv>Polica</naziv>
-      <Id>2</Id>
-      <Naziv>Polica</Naziv>
     </TipNamestaja>
   </Namestaj>
 </ArrayOfNamestaj>

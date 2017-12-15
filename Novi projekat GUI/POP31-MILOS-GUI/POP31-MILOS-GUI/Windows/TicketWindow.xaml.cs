@@ -46,7 +46,7 @@ namespace POP31_MILOS_GUI.Windows
             usluge.Add(d2);
             comboBoxDU.ItemsSource = usluge;
 
-            DataContext = n; //binding path ce traziti taj properti u instanci klase n
+            DataContext = n; 
         }
 
         private void Finish(object sender, RoutedEventArgs e)
