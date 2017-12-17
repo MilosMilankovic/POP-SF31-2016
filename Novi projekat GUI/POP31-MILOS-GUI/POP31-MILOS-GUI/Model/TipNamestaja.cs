@@ -19,6 +19,7 @@ namespace POP_31.Model
 
         public string naziv;
         private int id;
+        private bool obrisan;
 
         public int Id
         {
@@ -27,6 +28,16 @@ namespace POP_31.Model
             {
                 id = value;
                 OnPropertyChanged("Id");
+            }
+        }
+
+        public bool Obrisan
+        {
+            get { return obrisan; }
+            set
+            {
+                obrisan = value;
+                OnPropertyChanged("Obrisan");
             }
         }
 

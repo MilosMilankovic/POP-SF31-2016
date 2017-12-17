@@ -10,6 +10,7 @@
     <TipNamestaja>
       <naziv>Orman</naziv>
       <Id>3</Id>
+      <Obrisan>false</Obrisan>
       <Naziv>Orman</Naziv>
     </TipNamestaja>
   </Namestaj>
@@ -23,6 +24,7 @@
     <TipNamestaja>
       <naziv>Polica</naziv>
       <Id>2</Id>
+      <Obrisan>false</Obrisan>
       <Naziv>Polica</Naziv>
     </TipNamestaja>
   </Namestaj>
@@ -31,11 +33,12 @@
     <Id>3</Id>
     <Naziv>Kuhinjski sto</Naziv>
     <JedinicnaCena>7000</JedinicnaCena>
-    <KolicinaUmagacinu>3</KolicinaUmagacinu>
+    <KolicinaUmagacinu>1</KolicinaUmagacinu>
     <Sifra>sto1</Sifra>
     <TipNamestaja>
       <naziv>Sto</naziv>
       <Id>1</Id>
+      <Obrisan>false</Obrisan>
       <Naziv>Sto</Naziv>
     </TipNamestaja>
   </Namestaj>

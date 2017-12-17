@@ -15,6 +15,7 @@
         <Button Content="Obrisi" HorizontalAlignment="Left" Margin="283,248,0,0" VerticalAlignment="Top" Width="90" Height="26" Click="Obrisi"/>
         <Button Content="Racun" HorizontalAlignment="Left" Margin="407,248,0,0" VerticalAlignment="Top" Width="81" Height="26" Click="Racun"/>
         <Button Content="Zatvori" HorizontalAlignment="Left" Margin="407,301,0,0" VerticalAlignment="Top" Width="81" Height="39" Click="Zatvori"/>
+        <Button Content="Dodaj tip namestaja" HorizontalAlignment="Left" Margin="38,301,0,0" VerticalAlignment="Top" Width="115" Height="29" Click="DodajTipNamestaja"/>
 
 
     </Grid>

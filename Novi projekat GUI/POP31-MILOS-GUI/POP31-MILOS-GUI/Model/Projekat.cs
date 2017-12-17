@@ -17,7 +17,7 @@ namespace POP_31.Model
         public Projekat()
         {
             Namestaj = new ObservableCollection<Namestaj>(GenericSerializer.Deserialize<Namestaj>("Namestaj.xml"));
-            TipNamestaja = new TipNamestaja.GetAll();
+            TipNamestaja = new ObservableCollection<TipNamestaja>(GenericSerializer.Deserialize<TipNamestaja>("tipoviNamestaja.xml"));
         }
     }
 }

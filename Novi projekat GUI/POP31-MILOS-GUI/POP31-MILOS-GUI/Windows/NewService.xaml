@@ -1,0 +1,21 @@
+﻿<Window x:Class="POP31_MILOS_GUI.Windows.NewService"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POP31_MILOS_GUI.Windows"
+        mc:Ignorable="d"
+        Title="NewService" Height="300" Width="300" Background="Aquamarine">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Naziv usluge:" HorizontalAlignment="Left" Margin="29,50,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
+        <Label Content="Cena usluge:" HorizontalAlignment="Left" Margin="29,121,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="98,7,0,0" VerticalAlignment="Top" Width="75" Height="19" Grid.Row="1" Click="Finish"/>
+        <TextBox Name="tbName" HorizontalAlignment="Left" Height="23" Margin="147,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="tbCena" HorizontalAlignment="Left" Height="23" Margin="147,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

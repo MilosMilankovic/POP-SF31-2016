@@ -2,6 +2,7 @@
 using POP_31.Util;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,19 +22,19 @@ namespace POP31_MILOS_GUI.Windows
     /// </summary>
     public partial class TicketWindow : Window
     {
-        List<DodatnaUsluga> usluge;
+        public static ObservableCollection<DodatnaUsluga> usluge;
         private Namestaj nam;
         public TicketWindow()
         {
             InitializeComponent();
-            usluge = new List<DodatnaUsluga>();
+            usluge = new ObservableCollection<DodatnaUsluga>();
         }
 
         public TicketWindow(Namestaj n)
         {
             nam = n;
             InitializeComponent();
-            usluge = new List<DodatnaUsluga>();
+            usluge = new ObservableCollection<DodatnaUsluga>();
             DodatnaUsluga d1 = new DodatnaUsluga();
             d1.Naziv = "Prevoz";
             d1.Cena = 3000;
@@ -42,8 +43,14 @@ namespace POP31_MILOS_GUI.Windows
             d2.Naziv = "Montaza";
             d2.Cena = 5000;
 
+            DodatnaUsluga d3 = new DodatnaUsluga();
+            d3.Naziv = "Nova usluga...";
+            d3.Cena = 0;
+
+
             usluge.Add(d1);
             usluge.Add(d2);
+            usluge.Add(d3);
             comboBoxDU.ItemsSource = usluge;
 
             DataContext = n; 
@@ -55,7 +62,16 @@ namespace POP31_MILOS_GUI.Windows
                 DodatnaUsluga d = comboBoxDU.SelectedItem as DodatnaUsluga;
             if (comboBoxDU.SelectedItem != null)
             {
-                ukupnaCena = nam.JedinicnaCena + d.Cena;
+                if (d.Naziv == "Nova usluga...")
+                {
+                    NewService ns = new NewService();
+                    ns.ShowDialog();
+                    ukupnaCena = nam.JedinicnaCena + usluge[0].Cena;
+                }
+                else
+                {
+                    ukupnaCena = nam.JedinicnaCena + d.Cena;
+                }
             }
             else
             {

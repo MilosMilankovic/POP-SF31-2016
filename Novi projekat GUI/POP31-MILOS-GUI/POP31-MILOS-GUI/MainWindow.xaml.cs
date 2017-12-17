@@ -45,50 +45,75 @@ namespace POP31_MILOS_GUI
 
         private void Dodaj(object sender, RoutedEventArgs e)
         {
-            AddWindow window = new AddWindow();
-            window.labelaIzmena.Content = "Dodavanje";
-            window.ShowDialog();
-            dataGr.Items.Refresh();
-        }
-        private void Izmeni(object sender, RoutedEventArgs e)
-        {
-           
-            if(dataGr.SelectedItem!=null)
+            if (LogInWindow.isAdmin == true)
             {
-                AddWindow prozor = new AddWindow(dataGr.SelectedItem as Namestaj);
-                prozor.labelaIzmena.Content = "Izmena";
-                prozor.ShowDialog();
+                AddWindow window = new AddWindow();
+                window.labelaIzmena.Content = "Dodavanje";
+                window.ShowDialog();
                 dataGr.Items.Refresh();
             }
             else
             {
-                MessageBox.Show("Morate odabrati sta menjate!");
+                MessageBox.Show("Samo admin moze da dodaje artikle!");
+            }
+        }
+        private void Izmeni(object sender, RoutedEventArgs e)
+        {
+            if (LogInWindow.isAdmin == true)
+            {
+
+                if (dataGr.SelectedItem != null)
+                {
+                    AddWindow prozor = new AddWindow(dataGr.SelectedItem as Namestaj);
+                    prozor.labelaIzmena.Content = "Izmena";
+                    prozor.ShowDialog();
+                    dataGr.Items.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Morate odabrati sta menjate!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Samo admin moze da menja artikle!");
             }
         }
         private void Obrisi(object sender, RoutedEventArgs e)
         {
+            
             if (dataGr.SelectedItem != null)
             {
-                if (MessageBox.Show($"Da li ste sigurni da zelite da izbrisete?", "Brisanje", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                if (LogInWindow.isAdmin == true)
                 {
-                    Namestaj n = dataGr.SelectedItem as Namestaj;
-                    foreach (Namestaj nam in MainWindow.lista)
+                    if (MessageBox.Show($"Da li ste sigurni da zelite da izbrisete?", "Brisanje", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
-                        if (nam.Id == n.Id)
+                        Namestaj n = dataGr.SelectedItem as Namestaj;
+                        foreach (Namestaj nam in MainWindow.lista)
                         {
-                            MainWindow.lista.Remove(nam);
-                            break;
+                            if (nam.Id == n.Id)
+                            {
+                                MainWindow.lista.Remove(nam);
+                                break;
+                            }
                         }
+                        dataGr.Items.Refresh();
+                        GenericSerializer.Serialize<Namestaj>("Namestaj.xml", lista);
                     }
-                    dataGr.Items.Refresh();
-                    GenericSerializer.Serialize<Namestaj>("Namestaj.xml", lista);
+
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Samo admin moze da brise artikle!");
                 }
             }
             else
             {
                 MessageBox.Show("Niste selektovali sta hocete da obrisete!");
-                
+
             }
+
         }
 
         private void Prikaz_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
@@ -128,6 +153,12 @@ namespace POP31_MILOS_GUI
         private void Zatvori(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void DodajTipNamestaja(object sender, RoutedEventArgs e)
+        {
+            NewType window = new NewType();
+            window.ShowDialog();
         }
     }
 }

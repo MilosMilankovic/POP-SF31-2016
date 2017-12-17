@@ -23,6 +23,7 @@ namespace POP31_MILOS_GUI.Windows
     public partial class LogInWindow : Window
     {
         public static ObservableCollection<Korisnik> korisnici;
+        public static bool isAdmin = false;
         public LogInWindow()
         {
             korisnici = new ObservableCollection<Korisnik>();
@@ -40,12 +41,21 @@ namespace POP31_MILOS_GUI.Windows
                 if(k.KorisnickoIme==user && k.Lozinka==pass)
                 {
                     nadjen = true;
+                    if(k.TipKorisnika==TipKorisnika.Administrator)
+                    {
+                        isAdmin = true;
+                    }
+                    else
+                    {
+                        isAdmin = false;
+                    }
                     break;
                 }
             }
 
             if(nadjen==true)
             {
+                
                 MainWindow win = new MainWindow();
                 this.Close();
                 win.ShowDialog();
