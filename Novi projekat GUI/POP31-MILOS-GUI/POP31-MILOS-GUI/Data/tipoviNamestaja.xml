@@ -3,16 +3,25 @@
   <TipNamestaja>
     <naziv>Sto</naziv>
     <Id>1</Id>
+    <Obrisan>false</Obrisan>
     <Naziv>Sto</Naziv>
   </TipNamestaja>
   <TipNamestaja>
     <naziv>Polica</naziv>
     <Id>2</Id>
+    <Obrisan>false</Obrisan>
     <Naziv>Polica</Naziv>
   </TipNamestaja>
   <TipNamestaja>
     <naziv>Orman</naziv>
     <Id>3</Id>
+    <Obrisan>false</Obrisan>
     <Naziv>Orman</Naziv>
+  </TipNamestaja>
+  <TipNamestaja>
+    <naziv />
+    <Id>4</Id>
+    <Obrisan>false</Obrisan>
+    <Naziv />
   </TipNamestaja>
 </ArrayOfTipNamestaja>

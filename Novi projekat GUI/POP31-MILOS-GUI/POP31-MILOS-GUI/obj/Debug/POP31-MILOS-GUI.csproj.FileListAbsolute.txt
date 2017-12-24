@@ -145,3 +145,4 @@ C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\NewType.baml
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\NewService.g.cs
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\NewService.baml
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csprojResolveAssemblyReference.cache

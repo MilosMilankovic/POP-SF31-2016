@@ -88,7 +88,7 @@ namespace POP_31.Model
                     var tn = new TipNamestaja();
                     tn.Id = int.Parse(row["Id"].ToString());
                     tn.Naziv = row["Naziv"].ToString();
-                    //tn.Obrisan = bool.Parse(row["Obrisan"].ToString());
+                    tn.Obrisan = bool.Parse(row["Obrisan"].ToString());
 
                     tipoviNamestaja.Add(tn);
                 }
@@ -109,7 +109,7 @@ namespace POP_31.Model
                 cmd.CommandText += "SELECT SCOPE_IDENTITY();";
 
                 cmd.Parameters.AddWithValue("Naziv", tn.Naziv);
-                //cmd.Parameters.AddWithValue("Obrisan", tn.Obrisan);
+                cmd.Parameters.AddWithValue("Obrisan", tn.Obrisan);
 
                 int newId = int.Parse(cmd.ExecuteScalar().ToString());
                 tn.Id = newId;
@@ -130,7 +130,7 @@ namespace POP_31.Model
 
                 cmd.Parameters.AddWithValue("Id", tn.Id);
                 cmd.Parameters.AddWithValue("Naziv", tn.Id);
-                //cmd.Parameters.AddWithValue("Obrisan", tn.Obrisan);
+                cmd.Parameters.AddWithValue("Obrisan", tn.Obrisan);
 
                 cmd.ExecuteNonQuery();
 
@@ -139,7 +139,7 @@ namespace POP_31.Model
                     if(tipNamestaja.Id == tn.Id)
                     {
                         tipNamestaja.Naziv = tn.Naziv;
-                        //tipNamestaja.Obrisan = tn.Obrisan;
+                        tipNamestaja.Obrisan = tn.Obrisan;
                         break;
                     }
                 }
@@ -149,7 +149,7 @@ namespace POP_31.Model
 
         public static void Delete(TipNamestaja tn)
         {
-            //tn.Obrisan = true;
+            tn.Obrisan = true;
             Update(tn);
         }
 
