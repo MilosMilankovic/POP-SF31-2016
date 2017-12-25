@@ -55,9 +55,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Prozori\GlavniProzor.xaml.cs">
+      <DependentUpon>GlavniProzor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Prozori\NamestajProzor.xaml.cs">
+      <DependentUpon>NamestajProzor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Prozori\TipNamestajaEditProzor.xaml.cs">
+      <DependentUpon>TipNamestajaEditProzor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Prozori\TipNamestajaProzor.xaml.cs">
+      <DependentUpon>TipNamestajaProzor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Util\GenericSerializer.cs" />
     <Compile Include="Windows\AddWindow.xaml.cs">
       <DependentUpon>AddWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Akcija.xaml.cs">
+      <DependentUpon>Akcija.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\LogInWindow.xaml.cs">
       <DependentUpon>LogInWindow.xaml</DependentUpon>
@@ -83,7 +98,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Prozori\GlavniProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Prozori\NamestajProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Prozori\TipNamestajaEditProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Prozori\TipNamestajaProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\AddWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Akcija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -151,6 +186,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="Data\akcije.xml" />
     <Content Include="Db_scripts\crebas.sql" />
     <Content Include="Db_scripts\seed.sql" />
   </ItemGroup>

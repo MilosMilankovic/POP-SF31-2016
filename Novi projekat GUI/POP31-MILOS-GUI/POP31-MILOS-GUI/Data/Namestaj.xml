@@ -7,12 +7,7 @@
     <JedinicnaCena>4000</JedinicnaCena>
     <KolicinaUmagacinu>23</KolicinaUmagacinu>
     <Sifra>orman1</Sifra>
-    <TipNamestaja>
-      <naziv>Orman</naziv>
-      <Id>3</Id>
-      <Obrisan>false</Obrisan>
-      <Naziv>Orman</Naziv>
-    </TipNamestaja>
+    <TipNamestajaId>3</TipNamestajaId>
   </Namestaj>
   <Namestaj>
     <Obrisan>false</Obrisan>
@@ -21,12 +16,7 @@
     <JedinicnaCena>2000</JedinicnaCena>
     <KolicinaUmagacinu>3</KolicinaUmagacinu>
     <Sifra>polica1</Sifra>
-    <TipNamestaja>
-      <naziv>Polica</naziv>
-      <Id>2</Id>
-      <Obrisan>false</Obrisan>
-      <Naziv>Polica</Naziv>
-    </TipNamestaja>
+    <TipNamestajaId>2</TipNamestajaId>
   </Namestaj>
   <Namestaj>
     <Obrisan>false</Obrisan>
@@ -35,11 +25,6 @@
     <JedinicnaCena>7000</JedinicnaCena>
     <KolicinaUmagacinu>1</KolicinaUmagacinu>
     <Sifra>sto1</Sifra>
-    <TipNamestaja>
-      <naziv>Sto</naziv>
-      <Id>1</Id>
-      <Obrisan>false</Obrisan>
-      <Naziv>Sto</Naziv>
-    </TipNamestaja>
+    <TipNamestajaId>1</TipNamestajaId>
   </Namestaj>
 </ArrayOfNamestaj>

@@ -1,5 +1,6 @@
 ﻿using POP_31.Model;
 using POP_31.Util;
+using POP31_MILOS_GUI.Prozori;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -22,13 +23,13 @@ namespace POP31_MILOS_GUI.Windows
     /// </summary>
     public partial class LogInWindow : Window
     {
-        public static ObservableCollection<Korisnik> korisnici;
         public static bool isAdmin = false;
         public LogInWindow()
         {
-            korisnici = new ObservableCollection<Korisnik>();
-            korisnici = GenericSerializer.Deserialize<Korisnik>("korisnici.xml");
             InitializeComponent();
+            userTB.Text = "Milos123";
+            passTB.Text = "milos";
+
         }
 
         private void Login(object sender, RoutedEventArgs e)
@@ -36,7 +37,7 @@ namespace POP31_MILOS_GUI.Windows
             string user = userTB.Text;
             string pass = passTB.Text;
             bool nadjen = false;
-            foreach(Korisnik k in korisnici)
+            foreach(Korisnik k in Projekat.Instance.Korisnici)
             {
                 if(k.KorisnickoIme==user && k.Lozinka==pass)
                 {
@@ -56,7 +57,7 @@ namespace POP31_MILOS_GUI.Windows
             if(nadjen==true)
             {
                 
-                MainWindow win = new MainWindow();
+                GlavniProzor win = new GlavniProzor();
                 this.Close();
                 win.ShowDialog();
                 

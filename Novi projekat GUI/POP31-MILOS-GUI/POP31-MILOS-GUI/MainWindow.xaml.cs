@@ -160,5 +160,10 @@ namespace POP31_MILOS_GUI
             NewType window = new NewType();
             window.ShowDialog();
         }
+
+        private void AkcijeMeni(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -14,10 +14,14 @@ namespace POP_31.Model
 
         public ObservableCollection<Namestaj> Namestaj;
         public ObservableCollection<TipNamestaja> TipNamestaja;
+        public ObservableCollection<Akcija> Akcije;
+        public ObservableCollection<Korisnik> Korisnici;
         public Projekat()
         {
-            Namestaj = new ObservableCollection<Namestaj>(GenericSerializer.Deserialize<Namestaj>("Namestaj.xml"));
-            TipNamestaja = new ObservableCollection<TipNamestaja>(GenericSerializer.Deserialize<TipNamestaja>("tipoviNamestaja.xml"));
+            Namestaj = GenericSerializer.Deserialize<Namestaj>("Namestaj.xml");
+            TipNamestaja = GenericSerializer.Deserialize<TipNamestaja>("tipoviNamestaja.xml");
+            //Akcije = GenericSerializer.Deserialize<Akcija>("akcije.xml");
+            Korisnici = GenericSerializer.Deserialize<Korisnik>("korisnici.xml");
         }
     }
 }

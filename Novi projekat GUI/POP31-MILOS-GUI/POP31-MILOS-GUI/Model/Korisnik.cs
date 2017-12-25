@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,24 +15,106 @@ namespace POP_31.Model
         Prodavac
     }
 
-    public class Korisnik
+    public class Korisnik : INotifyPropertyChanged
     {
 
-        public int Id { get; set; }
+       
 
-        public string Ime { get; set; }
+        private int id;
 
-        public string Prezime { get; set; }
+        public int Id
+        {
+            get { return id; }
+            set
+            {
+                id = value;
+                OnPropertyChanged("Id");
+            }
+        }
 
-        public string KorisnickoIme { get; set; }
+     
+        private string ime;
 
-        public string Lozinka { get; set; }
+        public string Ime
+        {
+            get { return ime; }
+            set
+            {
+                ime = value;
+                OnPropertyChanged("Ime");
+            }
+        }
+        
+        private string prezime;
 
-        public TipKorisnika TipKorisnika { get; set; }
+        public string Prezime
+        {
+            get { return prezime; }
+            set
+            {
+                prezime = value;
+                OnPropertyChanged("Prezime");
+            }
+        }
+
+        private string korisnickoIme;
+
+        public string KorisnickoIme
+        {
+            get { return korisnickoIme; }
+            set
+            {
+                korisnickoIme = value;
+                OnPropertyChanged("KorisnickoIme");
+            }
+        }
+
+        
+        private string lozinka;
+
+        public string Lozinka
+        {
+            get { return lozinka; }
+            set
+            {
+                lozinka = value;
+                OnPropertyChanged("Lozinka");
+            }
+        }
+        
+
+        private TipKorisnika tipKorisnika;
+
+        public TipKorisnika TipKorisnika
+        {
+            get { return tipKorisnika; }
+            set
+            {
+                tipKorisnika = value;
+                OnPropertyChanged("TipKorisnika");
+            }
+        }
 
 
-        public bool Obrisan { get; set; }
+        private bool obrisan;
 
+        public bool Obrisan
+        {
+            get { return obrisan; }
+            set
+            {
+                obrisan = value;
+                OnPropertyChanged("Obrisan");
+            }
+        }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
 }

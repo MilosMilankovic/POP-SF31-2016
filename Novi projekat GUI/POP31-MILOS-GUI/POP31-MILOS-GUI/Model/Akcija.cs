@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,16 +10,86 @@ namespace POP_31.Model
     [Serializable]
 
 
-    public class Akcija
+    public class Akcija : INotifyPropertyChanged
     {
-        public int Id { get; set; }
+        
+        private int id;
 
-        public DateTime DatumPocetka { get; set; }
+        public int Id
+        {
+            get { return id; }
+            set
+            {
+                id = value;
+                OnPropertyChanged("Id");
+            }
+        }
 
-        public DateTime DatumZavrsetka { get; set; }
 
-        public decimal Popust { get; set; }
+        private bool obrisan;
 
-        public bool Obrisan { get; set; }
+         public bool Obrisan
+        {
+            get { return obrisan; }
+            set
+            {
+                obrisan = value;
+                OnPropertyChanged("Obrisan");
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+
+        }
+        
+
+        private DateTime pocetakAkcije;
+
+        public DateTime PocetakAkcije
+        {
+            get { return pocetakAkcije; }
+            set
+            {
+                pocetakAkcije = value;
+                OnPropertyChanged("PocetakAkcije");
+            }
+        }
+
+
+        private DateTime krajAkcije;
+
+        public DateTime KrajAkcije
+        {
+            get { return krajAkcije; }
+            set
+            {
+                krajAkcije = value;
+                OnPropertyChanged("KrajAkcije");
+            }
+        }
+
+        
+        private double popust;
+
+        public double Popust
+        {
+            get { return popust; }
+            set
+            {
+                popust = value;
+                OnPropertyChanged("Popust");
+            }
+        }
+
+
+
+
+
     }
 }

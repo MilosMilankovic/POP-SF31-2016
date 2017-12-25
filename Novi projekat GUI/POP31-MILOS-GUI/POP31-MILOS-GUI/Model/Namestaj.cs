@@ -18,7 +18,6 @@ namespace POP_31.Model
         private double jedinicnaCena;
         private int kolicinaUmagacinu;
         private string sifra;
-        private TipNamestaja tipNamestaja;
         private int tipNamestajaId;
         private bool obrisan;
 
@@ -82,22 +81,24 @@ namespace POP_31.Model
             }
         }
 
-        //[XmlIgnore] 
+        [XmlIgnore] 
         public TipNamestaja TipNamestaja
         {
-            get
-            {
-                if(tipNamestaja ==null)
-                {
-                    return null;
-                }
-                return tipNamestaja;
-            }
+           get { return TipNamestaja.GetById(tipNamestajaId); }
             set
             {
-                tipNamestaja = value;
+                TipNamestajaId = value.Id;
                 OnPropertyChanged("TipNamestaja");
+            }
+        }
 
+        public int TipNamestajaId
+        {
+            get { return tipNamestajaId; }
+            set
+            {
+                tipNamestajaId = value;
+                OnPropertyChanged("TipNamestajaId");
             }
         }
        
