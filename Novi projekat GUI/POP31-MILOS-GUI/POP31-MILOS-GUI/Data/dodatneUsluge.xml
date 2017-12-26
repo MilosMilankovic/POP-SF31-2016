@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDodatnaUsluga xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DodatnaUsluga>
+    <naziv>Sto</naziv>
+    <Id>0</Id>
+    <Obrisan>false</Obrisan>
+    <Naziv>dodatna usluga 1</Naziv>
+    <Cena>299</Cena>
+  </DodatnaUsluga>
+  <DodatnaUsluga>
+    <naziv>Polica</naziv>
+    <Id>1</Id>
+    <Obrisan>false</Obrisan>
+    <Naziv>dodatna usluga 2</Naziv>
+    <Cena>3509</Cena>
+  </DodatnaUsluga>
+  <DodatnaUsluga>
+    <naziv>Orman</naziv>
+    <Id>2</Id>
+    <Obrisan>false</Obrisan>
+    <Naziv>dodatna usluga 3</Naziv>
+    <Cena>109</Cena>
+  </DodatnaUsluga>
+</ArrayOfDodatnaUsluga>

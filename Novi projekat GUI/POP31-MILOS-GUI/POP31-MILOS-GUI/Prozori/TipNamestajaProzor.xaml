@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POP31_MILOS_GUI.Prozori"
         mc:Ignorable="d"
-        Title="TipNamestajaProzor" Height="300" Width="450">
+        Title="TipNamestajaProzor" Height="300" Width="450" Background="Aquamarine">
     <Grid>
         <DataGrid Name="dgTipNamestaja" HorizontalAlignment="Stretch" Height="220" Margin="5,5,5,0" VerticalAlignment="Top"  AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" SelectionMode="Single" IsReadOnly="True" HeadersVisibility="Column">
             <DataGrid.Columns>
@@ -13,9 +13,9 @@
                 <DataGridTextColumn Header="Naziv" Binding="{Binding Naziv}" Width="1*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="btnDodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="33,241,0,0" VerticalAlignment="Top" Width="75" Click="btnDodaj_Click"/>
-        <Button Name="btnIzmeni" Content="Izmeni" HorizontalAlignment="Left" Margin="198,241,0,0" VerticalAlignment="Top" Width="75" Click="btnIzmeni_Click"/>
-        <Button Name="btnObrisi" Content="Obrisi" HorizontalAlignment="Left" Margin="341,241,0,0" VerticalAlignment="Top" Width="75" Click="btnObrisi_Click"/>
+        <Button Name="btnDodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="35,241,0,0" VerticalAlignment="Top" Width="75" Click="btnDodaj_Click"/>
+        <Button Name="btnIzmeni" Content="Izmeni" HorizontalAlignment="Left" Margin="186,241,0,0" VerticalAlignment="Top" Width="75" Click="btnIzmeni_Click"/>
+        <Button Name="btnObrisi" Content="Obrisi" HorizontalAlignment="Left" Margin="340,241,0,0" VerticalAlignment="Top" Width="75" Click="btnObrisi_Click"/>
 
     </Grid>
 </Window>

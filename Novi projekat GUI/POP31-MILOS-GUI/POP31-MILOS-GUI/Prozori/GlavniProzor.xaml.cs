@@ -26,12 +26,25 @@ namespace POP31_MILOS_GUI.Prozori
 
         private void btnNamestaj_Click(object sender, RoutedEventArgs e) 
         {
-            //otvara prozor namestaj
+            NamestajProzor prozor = new NamestajProzor();
+            prozor.Show();
         }
 
         private void btnTipNamestaja_Click(object sender, RoutedEventArgs e)
         {
             TipNamestajaProzor prozor = new TipNamestajaProzor();
+            prozor.Show();
+        }
+
+        private void btnDodatnaUsluga_Click(object sender, RoutedEventArgs e)
+        {
+            DodatnaUslugaProzor prozor = new DodatnaUslugaProzor();
+            prozor.Show();
+        }
+
+        private void btnKorisnici_Click(object sender, RoutedEventArgs e)
+        {
+            KorisnikProzor prozor = new KorisnikProzor();
             prozor.Show();
         }
     }

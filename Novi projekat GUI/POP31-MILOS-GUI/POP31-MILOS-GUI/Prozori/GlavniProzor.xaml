@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="GlavniProzor" Height="400" Width="400" Background="Aquamarine">
     <Grid>
-        <Button Name="btnNamestaj" Content="Namestaj" HorizontalAlignment="Left" Margin="69,51,0,0" VerticalAlignment="Top" Width="75" Click="btnNamestaj_Click"/>
-        <Button Name="btnTipNamestaja" Content="Tip namestaja" HorizontalAlignment="Left" Margin="226,51,0,0" VerticalAlignment="Top" Width="75" Click="btnTipNamestaja_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="235,151,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="69,151,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="69,95,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="226,100,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="136,213,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.821,-1.24"/>
+        <Button Name="btnNamestaj" Content="Namestaj" HorizontalAlignment="Left" Margin="69,51,0,0" VerticalAlignment="Top" Width="87" Click="btnNamestaj_Click"/>
+        <Button Name="btnTipNamestaja" Content="Tip namestaja" HorizontalAlignment="Left" Margin="237,51,0,0" VerticalAlignment="Top" Width="87" Click="btnTipNamestaja_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="237,151,0,0" VerticalAlignment="Top" Width="87"/>
+        <Button Name="btnKorisnici" Content="Korisnici" HorizontalAlignment="Left" Margin="69,151,0,0" VerticalAlignment="Top" Width="87" Click="btnKorisnici_Click"/>
+        <Button Name="btnDodatnaUsluga" Content="Dodatna usluga" HorizontalAlignment="Left" Margin="69,95,0,0" VerticalAlignment="Top" Width="87" Click="btnDodatnaUsluga_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="237,100,0,0" VerticalAlignment="Top" Width="87"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="155,211,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="0.821,-1.24"/>
 
     </Grid>
 </Window>

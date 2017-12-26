@@ -51,12 +51,11 @@ namespace POP31_MILOS_GUI.Prozori
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
             
-            
             if( operacija == Operacija.DODAVANJE)
             {
                 Projekat.Instance.TipNamestaja.Add(tipNamestajaCopy);
             }
-            if (operacija == Operacija.IZMENA)
+            else if (operacija == Operacija.IZMENA)
             {
                 tipNamestajaReal.Copy(tipNamestajaCopy);
             }

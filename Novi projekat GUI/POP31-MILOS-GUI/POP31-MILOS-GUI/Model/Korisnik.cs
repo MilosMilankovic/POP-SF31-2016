@@ -19,6 +19,23 @@ namespace POP_31.Model
     {
 
        
+        public Korisnik()
+        {
+
+        }
+
+        public Korisnik(string ime, string prezime, string korisnickoIme, string lozinka, TipKorisnika tipKorisnika)
+        {
+            this.Id = id;
+            this.Ime = ime;
+            this.Prezime = prezime;
+            this.KorisnickoIme = korisnickoIme;
+            this.Lozinka = lozinka;
+            this.TipKorisnika = tipKorisnika;
+            this.Obrisan = false;
+        }
+        
+
 
         private int id;
 
@@ -116,5 +133,18 @@ namespace POP_31.Model
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+
+
+        public void Copy(Korisnik source)
+        {
+            this.Id = source.Id;
+            this.Ime = source.Ime;
+            this.Prezime = source.Prezime;
+            this.KorisnickoIme = source.KorisnickoIme;
+            this.Lozinka = source.Lozinka;
+            this.TipKorisnika = source.TipKorisnika;
+            this.Obrisan = source.Obrisan;
+        }
+      
     }
 }

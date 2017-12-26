@@ -16,10 +16,26 @@ namespace POP_31.Model
         private int id;
         private string naziv;
         private double jedinicnaCena;
-        private int kolicinaUmagacinu;
+        private int kolicinaUMagacinu;
         private string sifra;
         private int tipNamestajaId;
         private bool obrisan;
+
+        public Namestaj()
+        {
+
+        }
+
+        public Namestaj(string naziv, string sifra, double cena, int kolicinaUMagacinu, int tipNamestajaId)
+        {
+            this.Id = Projekat.Instance.Namestaj.Count;
+            this.Obrisan = false;
+            this.Naziv = naziv;
+            this.Sifra = sifra;
+            this.JedinicnaCena = cena;
+            this.KolicinaUMagacinu = kolicinaUMagacinu;
+            this.TipNamestajaId = tipNamestajaId;
+        }
 
         public bool Obrisan
         {
@@ -60,13 +76,13 @@ namespace POP_31.Model
             }
         }
 
-        public int KolicinaUmagacinu
+        public int KolicinaUMagacinu
         {
-            get { return kolicinaUmagacinu; }
+            get { return kolicinaUMagacinu; }
             set
             {
-                kolicinaUmagacinu = value;
-                OnPropertyChanged("KolicinaUmagacinu");
+                kolicinaUMagacinu = value;
+                OnPropertyChanged("KolicinaUMagacinu");
             }
         }
 
@@ -113,5 +129,17 @@ namespace POP_31.Model
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+
+        public void Copy(Namestaj source)
+        {
+            this.Id = source.Id;
+            this.JedinicnaCena = source.JedinicnaCena;
+            this.Naziv = source.Naziv;
+            this.KolicinaUMagacinu = source.KolicinaUMagacinu;
+            this.TipNamestaja = source.TipNamestaja;
+            this.Sifra = source.Sifra;
+            this.Obrisan = source.Obrisan;
+        }
+       
     }
 }

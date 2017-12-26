@@ -55,8 +55,12 @@ namespace POP31_MILOS_GUI.Prozori
 
         private void btnIzmeni_Click(object sender, RoutedEventArgs e)
         {
-            TipNamestajaEditProzor widnowEdit = new TipNamestajaEditProzor((TipNamestaja)dgTipNamestaja.SelectedItem);
-            widnowEdit.Show();
+            if (dgTipNamestaja.SelectedItem != null)
+            {
+                TipNamestajaEditProzor widnowEdit = new TipNamestajaEditProzor((TipNamestaja)dgTipNamestaja.SelectedItem);
+                widnowEdit.Show();
+            }
+            
         }
     }
 

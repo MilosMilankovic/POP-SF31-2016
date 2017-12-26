@@ -2,28 +2,28 @@
 <ArrayOfNamestaj xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Namestaj>
     <Obrisan>false</Obrisan>
-    <Id>5</Id>
+    <Id>0</Id>
     <Naziv>Decji orman</Naziv>
     <JedinicnaCena>4000</JedinicnaCena>
-    <KolicinaUmagacinu>23</KolicinaUmagacinu>
+    <KolicinaUMagacinu>23</KolicinaUMagacinu>
     <Sifra>orman1</Sifra>
-    <TipNamestajaId>3</TipNamestajaId>
-  </Namestaj>
-  <Namestaj>
-    <Obrisan>false</Obrisan>
-    <Id>2</Id>
-    <Naziv>Polica za knjige</Naziv>
-    <JedinicnaCena>2000</JedinicnaCena>
-    <KolicinaUmagacinu>3</KolicinaUmagacinu>
-    <Sifra>polica1</Sifra>
     <TipNamestajaId>2</TipNamestajaId>
   </Namestaj>
   <Namestaj>
     <Obrisan>false</Obrisan>
-    <Id>3</Id>
+    <Id>1</Id>
+    <Naziv>Polica za knjige</Naziv>
+    <JedinicnaCena>2000</JedinicnaCena>
+    <KolicinaUMagacinu>3</KolicinaUMagacinu>
+    <Sifra>polica1</Sifra>
+    <TipNamestajaId>0</TipNamestajaId>
+  </Namestaj>
+  <Namestaj>
+    <Obrisan>false</Obrisan>
+    <Id>2</Id>
     <Naziv>Kuhinjski sto</Naziv>
     <JedinicnaCena>7000</JedinicnaCena>
-    <KolicinaUmagacinu>1</KolicinaUmagacinu>
+    <KolicinaUMagacinu>1</KolicinaUMagacinu>
     <Sifra>sto1</Sifra>
     <TipNamestajaId>1</TipNamestajaId>
   </Namestaj>

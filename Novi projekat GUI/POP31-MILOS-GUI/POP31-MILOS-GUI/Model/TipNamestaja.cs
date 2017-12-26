@@ -19,11 +19,11 @@ namespace POP_31.Model
         private int id;
         private bool obrisan;
 
-
         public TipNamestaja()
         {
            
         }
+
         public TipNamestaja(string naziv)
         {
             this.Id = Projekat.Instance.TipNamestaja.Count;
@@ -50,7 +50,6 @@ namespace POP_31.Model
                 OnPropertyChanged("Obrisan");
             }
         }
-
 
         public string Naziv
         {
@@ -185,6 +184,11 @@ namespace POP_31.Model
 
                 #endregion
                 */
+
+        public override string ToString()
+        {
+            return $"{Naziv}";
+        }
     }
 }
 

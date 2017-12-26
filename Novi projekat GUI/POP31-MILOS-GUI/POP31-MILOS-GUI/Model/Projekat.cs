@@ -11,17 +11,21 @@ namespace POP_31.Model
     public class Projekat
     {
         public static Projekat Instance { get; private set; } = new Projekat();
+        //public object DodatnaUsluga { get; internal set; }
 
+        public Korisnik ulogovaniKorisnik;
         public ObservableCollection<Namestaj> Namestaj;
         public ObservableCollection<TipNamestaja> TipNamestaja;
-        public ObservableCollection<Akcija> Akcije;
+        //public ObservableCollection<Akcija> Akcije;
         public ObservableCollection<Korisnik> Korisnici;
+        public ObservableCollection<DodatnaUsluga> DodatneUsluge;
         public Projekat()
         {
             Namestaj = GenericSerializer.Deserialize<Namestaj>("Namestaj.xml");
             TipNamestaja = GenericSerializer.Deserialize<TipNamestaja>("tipoviNamestaja.xml");
             //Akcije = GenericSerializer.Deserialize<Akcija>("akcije.xml");
             Korisnici = GenericSerializer.Deserialize<Korisnik>("korisnici.xml");
+            DodatneUsluge = GenericSerializer.Deserialize<DodatnaUsluga>("dodatneUsluge.xml");
         }
     }
 }

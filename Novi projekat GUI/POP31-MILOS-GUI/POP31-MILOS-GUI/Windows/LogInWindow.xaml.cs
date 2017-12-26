@@ -23,7 +23,7 @@ namespace POP31_MILOS_GUI.Windows
     /// </summary>
     public partial class LogInWindow : Window
     {
-        public static bool isAdmin = false;
+        
         public LogInWindow()
         {
             InitializeComponent();
@@ -36,39 +36,22 @@ namespace POP31_MILOS_GUI.Windows
         {
             string user = userTB.Text;
             string pass = passTB.Text;
-            bool nadjen = false;
+            
             foreach(Korisnik k in Projekat.Instance.Korisnici)
             {
-                if(k.KorisnickoIme==user && k.Lozinka==pass)
+                if(k.KorisnickoIme==user && k.Lozinka==pass && k.Obrisan==false)
                 {
-                    nadjen = true;
-                    if(k.TipKorisnika==TipKorisnika.Administrator)
-                    {
-                        isAdmin = true;
-                    }
-                    else
-                    {
-                        isAdmin = false;
-                    }
-                    break;
+                    Projekat.Instance.ulogovaniKorisnik = k;
+                    GlavniProzor prozor = new GlavniProzor();
+                    prozor.Show();
+                    Close();
+                    return;
                 }
             }
-
-            if(nadjen==true)
-            {
-                
-                GlavniProzor win = new GlavniProzor();
-                this.Close();
-                win.ShowDialog();
-                
-            }
-            else
-            {
+            
                 MessageBox.Show("Dati korisnik ne postoji u bazi podataka!");
-            }
-
+           
         }
-
         
     }
 }

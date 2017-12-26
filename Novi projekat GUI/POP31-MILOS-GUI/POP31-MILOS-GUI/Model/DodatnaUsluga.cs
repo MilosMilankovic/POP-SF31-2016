@@ -11,9 +11,23 @@ namespace POP_31.Model
 
     public class DodatnaUsluga : INotifyPropertyChanged
     {
-        
-
+        private string naziv;
+        private double cena;
+        private bool obrisan;
         private int id;
+
+        public DodatnaUsluga()
+        {
+
+        }
+
+        public DodatnaUsluga(string naziv, double cena)
+        {
+            this.Naziv = naziv;
+            this.Cena = cena;
+            this.Obrisan = false;
+            this.Id = Projekat.Instance.DodatneUsluge.Count;
+        }
 
         public int Id
         {
@@ -22,6 +36,34 @@ namespace POP_31.Model
             {
                 id = value;
                 OnPropertyChanged("Id");
+            }
+        }
+        public string Naziv
+        {
+            get { return naziv; }
+            set
+            {
+                naziv = value;
+                OnPropertyChanged("Naziv");
+            }
+        }
+        
+        public double Cena
+        {
+            get { return cena; }
+            set
+            {
+                cena = value;
+                OnPropertyChanged("Cena");
+            }
+        }
+        public bool Obrisan
+        {
+            get { return obrisan; }
+            set
+            {
+                obrisan = value;
+                OnPropertyChanged("Obrisan");
             }
         }
 
@@ -33,41 +75,13 @@ namespace POP_31.Model
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-        
-        private string naziv;
 
-        public string Naziv
+        public void Copy(DodatnaUsluga source)
         {
-            get { return naziv; }
-            set
-            {
-                naziv = value;
-                OnPropertyChanged("Naziv");
-            }
-        }
-        
-        private double cena;
-
-        public double Cena
-        {
-            get { return cena; }
-            set
-            {
-                cena = value;
-                OnPropertyChanged("Cena");
-            }
-        }
-
-        private bool obrisan;
-
-        public bool Obrisan
-        {
-            get { return obrisan; }
-            set
-            {
-                obrisan = value;
-                OnPropertyChanged("Obrisan");
-            }
+            this.Id = source.Id;
+            this.Naziv = source.Naziv;
+            this.Cena = source.Cena;
+            this.Obrisan = source.Obrisan;
         }
     }
 }
