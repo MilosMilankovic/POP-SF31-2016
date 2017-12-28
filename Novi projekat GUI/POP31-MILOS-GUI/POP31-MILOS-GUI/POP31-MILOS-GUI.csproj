@@ -55,6 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Prozori\AkcijaEditPar.xaml.cs">
+      <DependentUpon>AkcijaEditPar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Prozori\AkcijaEditProzor.xaml.cs">
+      <DependentUpon>AkcijaEditProzor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Prozori\AkcijaProzor.xaml.cs">
+      <DependentUpon>AkcijaProzor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Prozori\DodatnaUslugaEditProzor.xaml.cs">
       <DependentUpon>DodatnaUslugaEditProzor.xaml</DependentUpon>
     </Compile>
@@ -76,6 +85,9 @@
     <Compile Include="Prozori\NamestajProzor.xaml.cs">
       <DependentUpon>NamestajProzor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Prozori\SalonProzor.xaml.cs">
+      <DependentUpon>SalonProzor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Prozori\TipNamestajaEditProzor.xaml.cs">
       <DependentUpon>TipNamestajaEditProzor.xaml</DependentUpon>
     </Compile>
@@ -93,6 +105,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Prozori\AkcijaEditPar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Prozori\AkcijaEditProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Prozori\AkcijaProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Prozori\DodatnaUslugaEditProzor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -118,6 +142,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Prozori\NamestajProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Prozori\SalonProzor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,1 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAkcija xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Akcija>
+    <Naziv>Akcija 1</Naziv>
+    <Id>0</Id>
+    <Obrisan>false</Obrisan>
+    <Pocetak>2017-01-12T00:00:00</Pocetak>
+    <Kraj>2018-01-02T00:00:00</Kraj>
+    <ListaParova>
+      <Par>
+        <NamestajId>0</NamestajId>
+        <Popust>10</Popust>
+      </Par>
+      <Par>
+        <NamestajId>2</NamestajId>
+        <Popust>15</Popust>
+      </Par>
+    </ListaParova>
+  </Akcija>
+  <Akcija>
+    <Naziv>Akcija 2</Naziv>
+    <Id>1</Id>
+    <Obrisan>false</Obrisan>
+    <Pocetak>2018-01-01T00:00:00</Pocetak>
+    <Kraj>2018-03-01T00:00:00</Kraj>
+    <ListaParova>
+      <Par>
+        <NamestajId>1</NamestajId>
+        <Popust>20</Popust>
+      </Par>
+    </ListaParova>
+  </Akcija>
+</ArrayOfAkcija>

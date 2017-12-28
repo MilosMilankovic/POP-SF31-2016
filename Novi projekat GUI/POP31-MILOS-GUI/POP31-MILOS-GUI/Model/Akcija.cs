@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace POP_31.Model
 {
@@ -12,7 +14,34 @@ namespace POP_31.Model
 
     public class Akcija : INotifyPropertyChanged
     {
-        
+        ObservableCollection<Par> listaParova;
+
+        public ObservableCollection<Par> ListaParova
+        {
+            get { return listaParova; }
+            set
+            {
+                listaParova = value;
+                OnPropertyChanged("ListaParova");
+            }
+        }
+
+
+        public Akcija()
+        {
+            this.listaParova = new ObservableCollection<Par>();
+        }
+
+        public Akcija(string naziv, DateTime pocetak, DateTime kraj, ObservableCollection<Par> listaParova)
+        {
+            this.Id = Projekat.Instance.Akcije.Count;
+            this.Naziv = naziv;
+            this.Pocetak = pocetak;
+            this.Kraj = kraj;
+            this.ListaParova = listaParova;
+        }
+
+
         private int id;
 
         public int Id
@@ -25,6 +54,17 @@ namespace POP_31.Model
             }
         }
 
+        private string naziv;
+
+        public string Naziv
+        {
+            get { return naziv; }
+            set
+            {
+                naziv = value;
+                OnPropertyChanged("Naziv");
+            }
+        }
 
         private bool obrisan;
 
@@ -49,47 +89,111 @@ namespace POP_31.Model
         }
         
 
-        private DateTime pocetakAkcije;
+        private DateTime pocetak;
 
-        public DateTime PocetakAkcije
+        public DateTime Pocetak
         {
-            get { return pocetakAkcije; }
+            get { return pocetak; }
             set
             {
-                pocetakAkcije = value;
-                OnPropertyChanged("PocetakAkcije");
+                pocetak = value;
+                OnPropertyChanged("Pocetak");
             }
         }
 
 
-        private DateTime krajAkcije;
+        private DateTime kraj;
 
-        public DateTime KrajAkcije
+        public DateTime Kraj
         {
-            get { return krajAkcije; }
+            get { return kraj; }
             set
             {
-                krajAkcije = value;
-                OnPropertyChanged("KrajAkcije");
+                kraj = value;
+                OnPropertyChanged("Kraj");
+            }
+        }
+        public void Copy(Akcija source)
+        {
+            this.Naziv = source.Naziv;
+            this.Id = source.Id;
+            this.Obrisan = source.Obrisan;
+            this.Pocetak = source.Pocetak;
+            this.Kraj = source.Kraj;
+            this.ListaParova = new ObservableCollection<Par>(source.listaParova); // nova lista
+        }
+
+
+    }
+
+    public class Par  : INotifyPropertyChanged    // za popust
+    {
+        double popust;
+        int namestajId;
+
+        public Par()
+        {
+
+        }
+
+        public Par(Namestaj namestaj, double popust)
+        {
+            this.Namestaj = namestaj;
+            this.Popust = popust;
+        }
+
+        [XmlIgnore]
+        public Namestaj Namestaj
+        {
+            get { return Namestaj.GetById(namestajId); }
+            set
+            {
+                namestajId = value.Id;
+                OnPropertyChanged("Namestaj");
+                
             }
         }
 
-        
-        private double popust;
+        public int NamestajId
+        {
+            get { return namestajId; }
+            set
+            {
+                namestajId = value;
+                OnPropertyChanged("Namestaj");
+                OnPropertyChanged("NamestajId");
+            }
+        }
 
         public double Popust
         {
-            get { return popust; }
+            get
+            {
+                return popust;
+            }
             set
             {
                 popust = value;
                 OnPropertyChanged("Popust");
             }
         }
+        
+        public void Copy(Par source)
+        {
+            this.NamestajId = source.NamestajId;
+            this.Popust = source.Popust;
+        }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
 
-
-
-
+        }
     }
+
+
 }

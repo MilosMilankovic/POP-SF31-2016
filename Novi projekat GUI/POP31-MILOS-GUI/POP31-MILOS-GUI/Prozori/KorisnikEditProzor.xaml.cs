@@ -40,7 +40,9 @@ namespace POP31_MILOS_GUI.Prozori
             tbLozinka.DataContext = korisnikCopy;
             tbPrezime.DataContext = korisnikCopy;
             cbTipKorisnika.DataContext = korisnikCopy;
-            
+
+            cbTipKorisnika.ItemsSource = Enum.GetValues(typeof(TipKorisnika));
+
             operacija = Operacija.DODAVANJE;
         }
 
@@ -55,6 +57,7 @@ namespace POP31_MILOS_GUI.Prozori
             tbKorisnickoIme.DataContext = korisnikCopy;
             tbLozinka.DataContext = korisnikCopy;
             tbPrezime.DataContext = korisnikCopy;
+            cbTipKorisnika.ItemsSource = Enum.GetValues(typeof(TipKorisnika));
             cbTipKorisnika.DataContext = korisnikCopy;
             operacija = Operacija.IZMENA;
         }

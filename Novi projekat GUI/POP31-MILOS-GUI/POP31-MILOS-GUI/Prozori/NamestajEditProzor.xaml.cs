@@ -40,6 +40,8 @@ namespace POP31_MILOS_GUI.Prozori
             tbSifra.DataContext = namestajCopy;
             cbTip.ItemsSource = Projekat.Instance.TipNamestaja;
 
+            cbTip.DataContext = namestajCopy;
+
             operacija = Operacija.DODAVANJE;
         }
 

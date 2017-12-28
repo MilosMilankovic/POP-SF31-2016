@@ -140,6 +140,17 @@ namespace POP_31.Model
             this.Sifra = source.Sifra;
             this.Obrisan = source.Obrisan;
         }
-       
+
+        public static Namestaj GetById(int id)
+        {
+            foreach( Namestaj namestaj in Projekat.Instance.Namestaj)
+            {
+                if(namestaj.Id == id)
+                {
+                    return namestaj;
+                }
+            }
+            return null;
+        }
     }
 }

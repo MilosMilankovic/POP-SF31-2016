@@ -26,7 +26,7 @@ namespace POP_31.Model
 
         public Korisnik(string ime, string prezime, string korisnickoIme, string lozinka, TipKorisnika tipKorisnika)
         {
-            this.Id = id;
+            this.Id = Projekat.Instance.Korisnici.Count;
             this.Ime = ime;
             this.Prezime = prezime;
             this.KorisnickoIme = korisnickoIme;

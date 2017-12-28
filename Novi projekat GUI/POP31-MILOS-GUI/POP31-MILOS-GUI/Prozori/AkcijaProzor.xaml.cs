@@ -17,49 +17,48 @@ using System.Windows.Shapes;
 namespace POP31_MILOS_GUI.Prozori
 {
     /// <summary>
-    /// Interaction logic for NamestajProzor.xaml
+    /// Interaction logic for AkcijaProzor.xaml
     /// </summary>
-    public partial class NamestajProzor : Window
+    public partial class AkcijaProzor : Window
     {
 
         ICollectionView view;
-        public NamestajProzor()
+        public AkcijaProzor()
         {
             InitializeComponent();
-            view = CollectionViewSource.GetDefaultView(Projekat.Instance.Namestaj);
+
+            view = CollectionViewSource.GetDefaultView(Projekat.Instance.Akcije);
             view.Filter = HideDeletedFilter;
-            dgNamestaj.ItemsSource = view;
+            dgAkcija.ItemsSource = view;
+
         }
         private bool HideDeletedFilter(object obj)
         {
-            return !((Namestaj)obj).Obrisan;   // nemoj prikazati ako je obrisan
+            return !((Akcija)obj).Obrisan;   // nemoj prikazati ako je obrisan
         }
 
         private void btnDodaj_Click(object sender, RoutedEventArgs e)
         {
-            NamestajEditProzor prozor = new NamestajEditProzor();
+            AkcijaEditProzor prozor = new AkcijaEditProzor();
             prozor.Show();
         }
 
         private void btnIzmeni_Click(object sender, RoutedEventArgs e)
         {
-            if (Projekat.Instance.ulogovaniKorisnik.TipKorisnika == TipKorisnika.Administrator)
+            
+            if(dgAkcija.SelectedItem != null)
             {
-
-                if (dgNamestaj.SelectedItem != null)
-                {
-                    NamestajEditProzor prozor = new NamestajEditProzor((Namestaj)dgNamestaj.SelectedItem);
-                    prozor.Show();
-                    view.Refresh();
-                }
+                AkcijaEditProzor prozor = new AkcijaEditProzor((Akcija)dgAkcija.SelectedItem);
+                prozor.Show();
             }
+            
         }
 
         private void btnObrisi_Click(object sender, RoutedEventArgs e)
         {
-            if(dgNamestaj.SelectedItem != null)
+           if(dgAkcija.SelectedItem != null)
             {
-                ((Namestaj)dgNamestaj.SelectedItem).Obrisan = true;
+                ((Akcija)dgAkcija.SelectedItem).Obrisan = true;
                 view.Refresh();
             }
         }

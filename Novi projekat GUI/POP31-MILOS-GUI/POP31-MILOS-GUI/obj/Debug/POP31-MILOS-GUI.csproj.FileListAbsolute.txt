@@ -158,3 +158,11 @@ C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csprojResolveAssemblyReference.cache
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Prozori\KorisnikEditProzor.g.cs
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Prozori\KorisnikEditProzor.baml
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Prozori\AkcijaProzor.g.cs
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Prozori\AkcijaProzor.baml
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Prozori\AkcijaEditProzor.g.cs
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Prozori\AkcijaEditProzor.baml
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Prozori\AkcijaEditPar.g.cs
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Prozori\AkcijaEditPar.baml
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Prozori\SalonProzor.g.cs
+C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Prozori\SalonProzor.baml

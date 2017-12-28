@@ -1,0 +1,28 @@
+﻿<Window x:Class="POP31_MILOS_GUI.Prozori.AkcijaEditProzor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POP31_MILOS_GUI.Prozori"
+        mc:Ignorable="d"
+        Title="AkcijaEditProzor" Height="500" Width="500" Background="Aquamarine">
+    <Grid>
+        <Label Content="Naziv:" HorizontalAlignment="Left" Margin="52,19,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="tbNaziv" Text="{Binding Naziv}" HorizontalAlignment="Left" Height="23" Margin="110,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DatePicker Name="dpPocetak" FirstDayOfWeek="Monday" SelectedDate="{Binding Pocetak, StringFormat=dd/MM/yyyy}" HorizontalAlignment="Left" Margin="203,89,0,0" VerticalAlignment="Top"/>
+        <DatePicker Name="dpKraj" FirstDayOfWeek="Monday" SelectedDate="{Binding Kraj, StringFormat=dd/MM/yyyy}" HorizontalAlignment="Left" Margin="203,143,0,0" VerticalAlignment="Top"/>
+        <Label Content="Datum pocetka:" HorizontalAlignment="Left" Margin="52,87,0,0" VerticalAlignment="Top"/>
+        <Label Content="Datum kraja" HorizontalAlignment="Left" Margin="94,143,0,0" VerticalAlignment="Top"/>
+        <DataGrid Name="dgPar" HorizontalAlignment="Stretch" Margin="15,174,188.6,96.4" Height="200" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" SelectionMode="Single" IsReadOnly="True" HeadersVisibility="Column" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Naziv" Binding="{Binding Namestaj.Naziv}" Width="1*"/>
+                <DataGridTextColumn Header="Popust" Binding="{Binding Popust}" Width="1*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="btnDodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="393,233,0,0" VerticalAlignment="Top" Width="75" Click="btnDodaj_Click"/>
+        <Button Name="btnObrisi" Content="Obrisi" HorizontalAlignment="Left" Margin="393,300,0,0" VerticalAlignment="Top" Width="75" Click="btnObrisi_Click"/>
+        <Button Name="btnOk" Content="Ok" HorizontalAlignment="Left" Margin="71,421,0,0" VerticalAlignment="Top" Width="75" Click="btnOk_Click"/>
+        <Button Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="342,421,0,0" VerticalAlignment="Top" Width="75" Click="btnCancel_Click"/>
+        <Button Name="btnIzmeni" Content="Izmeni" HorizontalAlignment="Left" Margin="393,276,0,0" VerticalAlignment="Top" Width="75" Click="btnIzmeni_Click"/>
+    </Grid>
+</Window>
