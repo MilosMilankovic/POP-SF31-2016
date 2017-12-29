@@ -76,6 +76,18 @@ namespace POP_31.Model
             }
         }
 
+        public static DodatnaUsluga GetById(int id)
+        {
+            foreach(DodatnaUsluga usluga in Projekat.Instance.DodatneUsluge)
+            {
+                if(usluga.Id == id)
+                {
+                    return usluga;
+                }
+             }
+            return null;
+        }
+
         public void Copy(DodatnaUsluga source)
         {
             this.Id = source.Id;

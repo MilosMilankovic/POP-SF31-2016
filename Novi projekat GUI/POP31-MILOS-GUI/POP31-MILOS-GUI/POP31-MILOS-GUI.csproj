@@ -85,6 +85,21 @@
     <Compile Include="Prozori\NamestajProzor.xaml.cs">
       <DependentUpon>NamestajProzor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Prozori\NovaProdajaProzor.xaml.cs">
+      <DependentUpon>NovaProdajaProzor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Prozori\ProdajaNamestajProzor.xaml.cs">
+      <DependentUpon>ProdajaNamestajProzor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Prozori\ProdajaProzor.xaml.cs">
+      <DependentUpon>ProdajaProzor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Prozori\ProdajaUslugaProzor.xaml.cs">
+      <DependentUpon>ProdajaUslugaProzor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Prozori\SalonEditProzor.xaml.cs">
+      <DependentUpon>SalonEditProzor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Prozori\SalonProzor.xaml.cs">
       <DependentUpon>SalonProzor.xaml</DependentUpon>
     </Compile>
@@ -142,6 +157,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Prozori\NamestajProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Prozori\NovaProdajaProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Prozori\ProdajaNamestajProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Prozori\ProdajaProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Prozori\ProdajaUslugaProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Prozori\SalonEditProzor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -219,6 +254,8 @@
   <ItemGroup>
     <Resource Include="Data\akcije.xml" />
     <Resource Include="Data\dodatneUsluge.xml" />
+    <Resource Include="Data\salon.xml" />
+    <Resource Include="Data\prodaje.xml" />
     <Content Include="Db_scripts\crebas.sql" />
     <Content Include="Db_scripts\seed.sql" />
   </ItemGroup>

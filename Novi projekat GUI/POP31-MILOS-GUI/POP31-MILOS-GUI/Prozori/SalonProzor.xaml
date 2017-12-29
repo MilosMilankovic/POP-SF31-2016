@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POP31_MILOS_GUI.Prozori"
         mc:Ignorable="d"
-        Title="SalonProzor" Height="500" Width="500">
+        Title="SalonProzor" Height="400" Width="350" Background="Aquamarine">
     <Grid>
         
+        <Label Name="lbNaziv" Content="Naziv" HorizontalAlignment="Left" Margin="34,30,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbAdresa"  Content="Adresa" HorizontalAlignment="Left" Margin="34,74,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.703,-0.547"/>
+        <Label Name="lbTelefon" Content="Telefon" HorizontalAlignment="Left" Margin="34,105,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbAdresaSajta" Content="Adresa sajta" HorizontalAlignment="Left" Margin="34,150,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbPIB" Content="PIB" HorizontalAlignment="Left" Margin="33,190,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbMaticniBroj" Content="Maticni broj" HorizontalAlignment="Left" Margin="33,221,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbZiroRacun" Content="Ziro racun" HorizontalAlignment="Left" Margin="34,267,0,0" VerticalAlignment="Top"/>
+        
+        <TextBox Name="tbNaziv" IsReadOnly="True" Text="{Binding Naziv}" HorizontalAlignment="Left" Height="23" Margin="172,30,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="tbAdresa" IsReadOnly="True" Text="{Binding Adresa}" HorizontalAlignment="Left" Height="23" Margin="172,74,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="tbTelefon" IsReadOnly="True"  Text="{Binding Telefon}" HorizontalAlignment="Left" Height="23" Margin="172,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="tbAdresaSajta" IsReadOnly="True"  Text="{Binding AdresaSajta}" HorizontalAlignment="Left" Height="23" Margin="172,150,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="tbPIB" IsReadOnly="True" Text="{Binding PIB}" HorizontalAlignment="Left" Height="23" Margin="172,190,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="tbMaticniBroj" IsReadOnly="True" Text="{Binding MaticniBroj}" HorizontalAlignment="Left" Height="23" Margin="172,224,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="tbZiroRacun"  IsReadOnly="True" Text="{Binding ZiroRacun}" HorizontalAlignment="Left" Height="23" Margin="172,269,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Button Name="btnIzmeni" Content="Izmeni" HorizontalAlignment="Left" Margin="134,328,0,0" VerticalAlignment="Top" Width="75" Click="btnIzmeni_Click"/>
+
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POP_31.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,27 @@ namespace POP31_MILOS_GUI.Prozori
     /// </summary>
     public partial class SalonProzor : Window
     {
+
+       
         public SalonProzor()
         {
             InitializeComponent();
+
+            tbAdresa.DataContext = Projekat.Instance.Salon;
+            tbAdresaSajta.DataContext = Projekat.Instance.Salon;
+            tbMaticniBroj.DataContext = Projekat.Instance.Salon;
+            tbNaziv.DataContext = Projekat.Instance.Salon;
+            tbPIB.DataContext = Projekat.Instance.Salon;
+            tbTelefon.DataContext = Projekat.Instance.Salon;
+            tbZiroRacun.DataContext = Projekat.Instance.Salon;
+            
+        }
+
+        private void btnIzmeni_Click(object sender, RoutedEventArgs e)
+        {
+            SalonEditProzor prozor = new SalonEditProzor();
+            prozor.Show();
+
         }
     }
 }

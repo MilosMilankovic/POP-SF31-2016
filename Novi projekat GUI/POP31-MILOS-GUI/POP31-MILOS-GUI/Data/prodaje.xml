@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfProdajaNamestaja xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProdajaNamestaja>
+    <Id>0</Id>
+    <Kupac>kupac1</Kupac>
+    <BrojRacuna>4000</BrojRacuna>
+    <VremeKupovine>2017-01-12T00:00:00</VremeKupovine>
+    <listaDodatnihUslugaID>
+      <int>1</int>
+    </listaDodatnihUslugaID>
+    <listaParova>
+      <ParProdaja>
+        <Kolicina>2</Kolicina>
+        <NamestajId>1</NamestajId>
+      </ParProdaja>
+    </listaParova>
+  </ProdajaNamestaja>
+  <ProdajaNamestaja>
+    <Id>1</Id>
+    <Kupac>kupac2</Kupac>
+    <BrojRacuna>400</BrojRacuna>
+    <VremeKupovine>2017-01-12T00:00:00</VremeKupovine>
+    <listaDodatnihUslugaID>
+      <int>1</int>
+      <int>2</int>
+    </listaDodatnihUslugaID>
+    <listaParova>
+      <ParProdaja>
+        <Kolicina>4</Kolicina>
+        <NamestajId>0</NamestajId>
+      </ParProdaja>
+        <ParProdaja>
+        <Kolicina>1</Kolicina>
+          <NamestajId>2</NamestajId>
+      </ParProdaja>
+    </listaParova>
+  </ProdajaNamestaja>
+</ArrayOfProdajaNamestaja>

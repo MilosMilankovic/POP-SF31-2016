@@ -56,7 +56,14 @@ namespace POP31_MILOS_GUI.Prozori
 
         private void btnSalon_Click(object sender, RoutedEventArgs e)
         {
+            SalonProzor prozor = new SalonProzor();
+            prozor.Show();
+        }
 
+        private void btnProdaja_Click(object sender, RoutedEventArgs e)
+        {
+            ProdajaProzor prozor = new ProdajaProzor();
+            prozor.Show();
         }
     }
 }

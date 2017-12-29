@@ -1,0 +1,36 @@
+﻿<Window x:Class="POP31_MILOS_GUI.Prozori.NovaProdajaProzor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POP31_MILOS_GUI.Prozori"
+        mc:Ignorable="d"
+        Title="NovaProdajaProzor" Height="500" Width="500" Background="Aquamarine">
+    <Grid>
+        <Label Content="Kupac:" HorizontalAlignment="Left" Margin="55,32,0,0" VerticalAlignment="Top"/>
+        <Label Content="Broj racuna:" HorizontalAlignment="Left" Margin="55,63,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="tbKupac" Text="{Binding Kupac}" HorizontalAlignment="Left" Height="23" Margin="156,36,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="tbBrojRacuna" Text="{Binding BrojRacuna}" HorizontalAlignment="Left" Height="23" Margin="156,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DataGrid Name="dgPar" HorizontalAlignment="Stretch" Height="150" Margin="5,5,90,0" VerticalAlignment="Center" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" SelectionMode="Single" IsReadOnly="True" HeadersVisibility="Column">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Namestaj.Id}" Width="0.5*"/>
+                <DataGridTextColumn Header="Namestaj" Binding="{Binding Namestaj.Naziv}" Width="1*"/>
+                <DataGridTextColumn Header="Jedinicna cena" Binding="{Binding Namestaj.JedinicnaCena}" Width="1*"/>
+                <DataGridTextColumn Header="Kolicina" Binding="{Binding Kolicina}" Width="1*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Name="dgUsluga" HorizontalAlignment="Stretch" Height="150" Margin="5,5,90,0" VerticalAlignment="Bottom" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" SelectionMode="Single" IsReadOnly="True" HeadersVisibility="Column">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="0.5*"/>
+                <DataGridTextColumn Header="Naziv" Binding="{Binding Naziv}" Width="1*"/>
+                <DataGridTextColumn Header="Cena" Binding="{Binding Cena}" Width="1*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="btnDodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="409,189,0,0" VerticalAlignment="Top" Width="75" Click="btnDodaj_Click"/>
+        <Button Name="btnIzmeni" Content="Izmeni" HorizontalAlignment="Left" Margin="409,224,0,0" VerticalAlignment="Top" Width="75" Click="btnIzmeni_Click"/>
+        <Button Name="btnObrisi" Content="Obrisi" HorizontalAlignment="Left" Margin="409,260,0,0" VerticalAlignment="Top" Width="75" Click="btnObrisi_Click"/>
+        <Button Name="btnUslugaDodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="409,352,0,0" VerticalAlignment="Top" Width="75" Click="btnUslugaDodaj_Click"/>
+        <Button Name="btnUslugaObrisi" Content="Obrisi" HorizontalAlignment="Left" Margin="409,401,0,0" VerticalAlignment="Top" Width="75" Click="btnUslugaObrisi_Click"/>
+        <Button Name="btnKupi" Content="Kupi" HorizontalAlignment="Left" Margin="409,441,0,0" VerticalAlignment="Top" Width="75" Click="btnKupi_Click"/>
+    </Grid>
+</Window>

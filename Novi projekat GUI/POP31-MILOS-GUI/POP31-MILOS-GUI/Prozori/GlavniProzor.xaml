@@ -13,7 +13,7 @@
         <Button Name="btnKorisnici" Content="Korisnici" HorizontalAlignment="Left" Margin="69,151,0,0" VerticalAlignment="Top" Width="87" Click="btnKorisnici_Click"/>
         <Button Name="btnDodatnaUsluga" Content="Dodatna usluga" HorizontalAlignment="Left" Margin="69,95,0,0" VerticalAlignment="Top" Width="87" Click="btnDodatnaUsluga_Click"/>
         <Button Name="btnAkcija"  Content="Akcija" HorizontalAlignment="Left" Margin="237,100,0,0" VerticalAlignment="Top" Width="87" Click="btnAkcija_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="155,211,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="0.821,-1.24"/>
+        <Button Name="btnProdaja" Content="Prodaje" HorizontalAlignment="Left" Margin="155,211,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="0.821,-1.24" Click="btnProdaja_Click"/>
 
     </Grid>
 </Window>

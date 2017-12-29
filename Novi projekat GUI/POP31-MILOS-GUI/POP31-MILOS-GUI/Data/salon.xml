@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Salon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Naziv>Salon1</Naziv>
+  <Adresa>Danila Kis 2</Adresa>
+  <Telefon>12055</Telefon>
+  <Email>midaw@gmail.com</Email>
+  <AdresaSajta>salon1.com</AdresaSajta>
+  <PIB>2435223</PIB>
+  <MaticniBroj>234355</MaticniBroj>
+  <ZiroRacun>245-3523523-333</ZiroRacun>
+</Salon>

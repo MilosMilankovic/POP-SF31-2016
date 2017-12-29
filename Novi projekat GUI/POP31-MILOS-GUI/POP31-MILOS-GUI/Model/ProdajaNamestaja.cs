@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace POP_31.Model
 {
@@ -12,52 +15,33 @@ namespace POP_31.Model
     public class ProdajaNamestaja : INotifyPropertyChanged
     {
 
-        private int id;
-        public int Id
-        {
-            get { return id; }
-            set
-            {
-                id = value;
-                OnPropertyChanged("Id");
-            }
-        }
-        public List<Namestaj> NamestajZaProdaju { get; set; }
-
-        
-
-        private DateTime datumProdaje;
-
-        public DateTime DatumProdaje
-
-        {
-            get { return datumProdaje; }
-            set
-            {
-                datumProdaje = value;
-                OnPropertyChanged("DatumProdaje");
-            }
-        }
-
-        
-
-        private int brojRacuna;
-
-        public int BrojRacuna
-        {
-            get { return brojRacuna; }
-            set
-            {
-                brojRacuna = value;
-                OnPropertyChanged("BrojRacuna");
-            }
-        }
-        
         private string kupac;
+        private string brojRacuna;
+        private int id;
+        private DateTime vremeKupovine;
+        public ObservableCollection<int> listaDodatnihUslugaID;
+        public ObservableCollection<ParProdaja> listaParova;
+
+
+        public ObservableCollection<DodatnaUsluga> ListaDodatnihUsluga
+        {
+            get
+            {
+                ObservableCollection < DodatnaUsluga > lista = new ObservableCollection<DodatnaUsluga>();
+                foreach(int id in listaDodatnihUslugaID)
+                {
+                    lista.Add(DodatnaUsluga.GetById(id));
+                }
+                return lista;
+            }
+        }
 
         public string Kupac
         {
-            get { return kupac; }
+            get
+            {
+                return kupac;
+            }
             set
             {
                 kupac = value;
@@ -65,50 +49,63 @@ namespace POP_31.Model
             }
         }
 
-        public const double PDV = 0.02;
-
-        
-        private List<int> dodatnaUslugaId;
-
-        public List<int> DodatnaUslugaId
+        public string BrojRacuna
         {
-            get { return dodatnaUslugaId; }
+            get
+            {
+                return brojRacuna;
+            }
             set
             {
-                dodatnaUslugaId = value;
-                OnPropertyChanged("DodatneUslugaId");
+                brojRacuna = value;
+                OnPropertyChanged("BrojRacuna");
             }
         }
 
-
-        private double ukupanIznos;
-
-        public double UkupanIznos
+        public int Id
         {
-            get { return ukupanIznos; }
+            get
+            {
+                return id;
+            }
             set
             {
-                ukupanIznos = value;
-                OnPropertyChanged("UkupanIznos");
-
+                id = value;
+                OnPropertyChanged("Id");
             }
         }
-
-        //public const double PDV = 0.02; 
-
-        public Akcija Akcija { get; set; }
-
-
-        private bool obrisan;
-
-        public bool Obrisan
+        public DateTime VremeKupovine
         {
-            get { return obrisan; }
-            set {
-                obrisan = value;
-                OnPropertyChanged("Obrisan");
+            get
+            {
+                return vremeKupovine;
+            }
+            set
+            {
+                vremeKupovine = value;
+                OnPropertyChanged("VremeKupovine");
             }
         }
+
+       
+        public double UkupnaCena
+        {
+            get
+            {
+                double cena = 0;
+                
+                foreach (ParProdaja par in listaParova)
+                {
+                    cena += par.Namestaj.JedinicnaCena * par.Kolicina *  (100-Akcija.GetPopustByNamestaj(par.Namestaj))/100; 
+                }
+                foreach(DodatnaUsluga usluga in ListaDodatnihUsluga)
+                {
+                    cena += usluga.Cena;
+                }
+                return cena * 1.2;
+            }
+        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
@@ -117,6 +114,75 @@ namespace POP_31.Model
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
+        }
+    }
+
+    public class ParProdaja : INotifyPropertyChanged    // za popust
+    {
+        int kolicina;
+        int namestajId;
+
+        public ParProdaja()
+        {
+
+        }
+
+        public ParProdaja(Namestaj namestaj, int kolicina)
+        {
+            this.Namestaj = namestaj;
+            this.Kolicina = kolicina;
+        }
+
+        [XmlIgnore]
+        public Namestaj Namestaj
+        {
+            get { return Namestaj.GetById(namestajId); }
+            set
+            {
+                namestajId = value.Id;
+                OnPropertyChanged("Namestaj");
+
+            }
+        }
+
+        public int NamestajId
+        {
+            get { return namestajId; }
+            set
+            {
+                namestajId = value;
+                OnPropertyChanged("Namestaj");
+                OnPropertyChanged("NamestajId");
+            }
+        }
+
+        public int Kolicina
+        {
+            get
+            {
+                return kolicina;
+            }
+            set
+            {
+                kolicina = value;
+                OnPropertyChanged("Kolicina");
+            }
+        }
+
+        public void Copy(ParProdaja source)
+        {
+            this.NamestajId = source.NamestajId;
+            this.Kolicina = source.Kolicina;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+
         }
     }
 }

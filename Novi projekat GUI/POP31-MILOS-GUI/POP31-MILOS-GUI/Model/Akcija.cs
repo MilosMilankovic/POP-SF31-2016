@@ -78,6 +78,25 @@ namespace POP_31.Model
             }
         }
 
+        public static double GetPopustByNamestaj(Namestaj namestaj)  //trazi popust za namestaj
+        {
+            foreach(Akcija akcija in Projekat.Instance.Akcije)
+            {
+                if (akcija.Obrisan == false)
+                {
+                    foreach(Par par in akcija.ListaParova)
+                    {
+                        if(par.NamestajId == namestaj.Id)
+                        {
+                            return par.Popust;
+                        }
+                    }
+                }
+            }
+            return 0;
+        }
+
+
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string propertyName)
         {

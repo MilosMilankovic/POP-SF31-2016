@@ -15,6 +15,7 @@
         <Label Content="Datum kraja" HorizontalAlignment="Left" Margin="94,143,0,0" VerticalAlignment="Top"/>
         <DataGrid Name="dgPar" HorizontalAlignment="Stretch" Margin="15,174,188.6,96.4" Height="200" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" SelectionMode="Single" IsReadOnly="True" HeadersVisibility="Column" >
             <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding NamestajId}" Width="1*"/>
                 <DataGridTextColumn Header="Naziv" Binding="{Binding Namestaj.Naziv}" Width="1*"/>
                 <DataGridTextColumn Header="Popust" Binding="{Binding Popust}" Width="1*"/>
             </DataGrid.Columns>
