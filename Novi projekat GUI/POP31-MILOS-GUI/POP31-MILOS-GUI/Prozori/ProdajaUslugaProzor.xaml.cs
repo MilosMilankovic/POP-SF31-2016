@@ -34,7 +34,7 @@ namespace POP31_MILOS_GUI.Prozori
         {
             if(cbUsluga.SelectedItem != null)
             {
-                prodaja.listaDodatnihUslugaID.Add(((DodatnaUsluga)cbUsluga.SelectedItem).Id);
+                prodaja.listaDodatnihUsluga.Add((DodatnaUsluga)cbUsluga.SelectedItem);
                 Close();
             }
         }

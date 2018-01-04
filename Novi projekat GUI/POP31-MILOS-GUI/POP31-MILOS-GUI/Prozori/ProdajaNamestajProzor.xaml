@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POP31_MILOS_GUI.Prozori"
         mc:Ignorable="d"
-        Title="ProdajaNamestajProzor" Height="300" Width="300">
+        Title="ProdajaNamestajProzor" Height="300" Width="300" Background="Aquamarine">
     <Grid>
-        
+        <ComboBox Name="cbNamestaj" DisplayMemberPath="Naziv" SelectedItem="{Binding Namestaj}" HorizontalAlignment="Left" Margin="144,47,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Namestaj" HorizontalAlignment="Left" Margin="47,44,0,0" VerticalAlignment="Top"/>
+        <Label Content="Kolicina" HorizontalAlignment="Left" Margin="71,106,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="tbKolicina" Text="{Binding Kolicina}" HorizontalAlignment="Left" Height="23" Margin="144,106,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Button Name="btnOk" Content="Ok" HorizontalAlignment="Left" Margin="47,191,0,0" VerticalAlignment="Top" Width="75" Click="btnOk_Click"/>
+        <Button Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="189,191,0,0" VerticalAlignment="Top" Width="75" Click="btnCancel_Click"/>
+
     </Grid>
 </Window>

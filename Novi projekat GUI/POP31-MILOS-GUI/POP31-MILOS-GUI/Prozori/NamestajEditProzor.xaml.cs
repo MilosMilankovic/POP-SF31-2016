@@ -28,7 +28,7 @@ namespace POP31_MILOS_GUI.Prozori
 
         Operacija operacija;
         Namestaj namestajCopy;
-        Namestaj namestajReal;
+
         public NamestajEditProzor()
         {
             InitializeComponent();
@@ -50,7 +50,7 @@ namespace POP31_MILOS_GUI.Prozori
             InitializeComponent();
             namestajCopy = new Namestaj();
             namestajCopy.Copy(namestaj);
-            namestajReal = namestaj;
+
             tbNaziv.DataContext = namestajCopy;
             tbCena.DataContext = namestajCopy;
             tbKolicina.DataContext = namestajCopy;
@@ -64,16 +64,22 @@ namespace POP31_MILOS_GUI.Prozori
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            
-            if (operacija == Operacija.DODAVANJE)
+
+            if (tbNaziv.Text !="" && double.TryParse(tbCena.Text, out var x) && x > 0 && int.TryParse(tbKolicina.Text, out var y) && tbSifra.Text !="" && cbTip.SelectedItem !=null)
             {
-                Projekat.Instance.Namestaj.Add(namestajCopy);
+
+
+
+                if (operacija == Operacija.DODAVANJE)
+                {
+                    Namestaj.Create(namestajCopy);
+                }
+                if (operacija == Operacija.IZMENA)
+                {
+                    Namestaj.Update(namestajCopy);
+                }
+                Close();
             }
-            if (operacija == Operacija.IZMENA)
-            {
-                namestajReal.Copy(namestajCopy);
-            }
-            Close();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

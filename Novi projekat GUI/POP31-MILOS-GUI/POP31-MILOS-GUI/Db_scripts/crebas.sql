@@ -9,8 +9,9 @@ CREATE TABLE Namestaj (
 	Id INT PRIMARY KEY IDENTITY(1, 1),
 	TipNamestajaId INT,
 	Naziv VARCHAR(100),
-	Cena NUMERIC(9,2),
-	Kolicina INT,
+	JedinicnaCena NUMERIC(9,2),
+	KolicinaUMagacinu INT,
+	Sifra varchar(50),
 	Obrisan BIT,
 	FOREIGN KEY (TipNamestajaId) REFERENCES TipNamestaja(Id)
 )

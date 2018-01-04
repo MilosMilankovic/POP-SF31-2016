@@ -11,6 +11,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="0.5*"/>
                 <DataGridTextColumn Header="Naziv" Binding="{Binding Naziv}" Width="1*"/>
+                <DataGridTextColumn Header="Sifra" Binding="{Binding Path=Sifra}"  Width="1*"/>
                 <DataGridTextColumn Header="Jedinicna cena" Binding="{Binding JedinicnaCena}" Width="1*"/>
                 <DataGridTextColumn Header="Kolicina u magacinu" Binding="{Binding KolicinaUMagacinu}" Width="1*"/>
                 <DataGridTextColumn Header="Tip namestaja" Binding="{Binding Path=TipNamestaja}"  Width="1*"/>

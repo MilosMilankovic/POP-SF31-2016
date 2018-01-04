@@ -56,15 +56,21 @@ namespace POP31_MILOS_GUI.Prozori
         }
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            if (operacija == Operacija.DODAVANJE)
+            if (tbNaziv.Text !="" && double.TryParse(tbCena.Text, out var x) && x > 0)
             {
-                Projekat.Instance.DodatneUsluge.Add(dodatnaUslugaCopy);
+
+
+
+                if (operacija == Operacija.DODAVANJE)
+                {
+                    Projekat.Instance.DodatneUsluge.Add(dodatnaUslugaCopy);
+                }
+                else if (operacija == Operacija.IZMENA)
+                {
+                    dodatnaUslugaReal.Copy(dodatnaUslugaCopy);
+                }
+                Close();
             }
-            else if (operacija == Operacija.IZMENA)
-            {
-                dodatnaUslugaReal.Copy(dodatnaUslugaCopy);
-            }
-            Close();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

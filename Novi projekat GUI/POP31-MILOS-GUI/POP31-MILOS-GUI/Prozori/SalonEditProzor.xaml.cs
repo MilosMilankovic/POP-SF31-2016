@@ -43,8 +43,12 @@ namespace POP31_MILOS_GUI.Prozori
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            Projekat.Instance.Salon.Copy(salonCopy);
-            Close();
+            if (tbNaziv.Text !="" && tbAdresa.Text !="" && tbAdresaSajta.Text !="" && int.TryParse(tbMaticniBroj.Text, out var x)&& int.TryParse(tbPIB.Text,out var y)&& tbZiroRacun.Text !="")
+            {
+
+                Projekat.Instance.Salon.Copy(salonCopy);
+                Close();
+            }
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

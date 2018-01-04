@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POP31_MILOS_GUI.Prozori"
         mc:Ignorable="d"
-        Title="GlavniProzor" Height="400" Width="400" Background="Aquamarine">
+        Title="GlavniProzor" Height="300" Width="400" Background="Aquamarine">
     <Grid>
         <Button Name="btnNamestaj" Content="Namestaj" HorizontalAlignment="Left" Margin="69,51,0,0" VerticalAlignment="Top" Width="87" Click="btnNamestaj_Click"/>
         <Button Name="btnTipNamestaja" Content="Tip namestaja" HorizontalAlignment="Left" Margin="237,51,0,0" VerticalAlignment="Top" Width="87" Click="btnTipNamestaja_Click"/>

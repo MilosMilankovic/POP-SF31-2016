@@ -29,11 +29,12 @@ namespace POP31_MILOS_GUI.Prozori
             prodaja = new ProdajaNamestaja()
             {
                 listaDodatnihUslugaID = new ObservableCollection<int>(),
-                listaParova = new ObservableCollection<ParProdaja>()
+                listaParova = new ObservableCollection<ParProdaja>(),
+                listaDodatnihUsluga = new ObservableCollection<DodatnaUsluga>()
             };
 
             dgPar.ItemsSource = prodaja.listaParova;
-            dgUsluga.ItemsSource = prodaja.ListaDodatnihUsluga;
+            dgUsluga.ItemsSource = prodaja.listaDodatnihUsluga;
 
             tbKupac.DataContext = prodaja;
             tbBrojRacuna.DataContext = prodaja;
@@ -48,8 +49,8 @@ namespace POP31_MILOS_GUI.Prozori
             dgPar.ItemsSource = prodajaCopy.listaParova;
             dgUsluga.ItemsSource = prodajaCopy.ListaDodatnihUsluga;
 
-            tbKupac.DataContext = prodaja;
-            tbBrojRacuna.DataContext = prodaja;
+            tbKupac.DataContext = prodajaCopy;
+            tbBrojRacuna.DataContext = prodajaCopy;
 
             btnDodaj.IsEnabled = false;
             btnIzmeni.IsEnabled = false;
@@ -67,17 +68,28 @@ namespace POP31_MILOS_GUI.Prozori
 
         private void btnDodaj_Click(object sender, RoutedEventArgs e)
         {
-            
+            ProdajaNamestajProzor prozor = new ProdajaNamestajProzor(prodaja);
+            prozor.Show();
+
         }
 
         private void btnIzmeni_Click(object sender, RoutedEventArgs e)
         {
+            
 
+            if(dgPar.SelectedItem != null)
+            {
+                ProdajaNamestajProzor prozor = new ProdajaNamestajProzor(((ParProdaja)dgPar.SelectedItem), prodaja);
+                prozor.Show();
+            }
         }
 
         private void btnObrisi_Click(object sender, RoutedEventArgs e)
         {
-
+            if(dgPar.SelectedItem != null)
+            {
+                prodaja.listaParova.Remove((ParProdaja)dgPar.SelectedItem);
+            }
         }
 
         private void btnUslugaDodaj_Click(object sender, RoutedEventArgs e)
@@ -90,13 +102,26 @@ namespace POP31_MILOS_GUI.Prozori
         {
             if(dgUsluga.SelectedItem != null)
             {
-                prodaja.ListaDodatnihUsluga.Remove((DodatnaUsluga)dgUsluga.SelectedItem);
+                prodaja.listaDodatnihUsluga.Remove((DodatnaUsluga)dgUsluga.SelectedItem);
             }
         }
 
         private void btnKupi_Click(object sender, RoutedEventArgs e)
         {
 
+            if (tbKupac.Text !="" && tbBrojRacuna.Text !="" && (prodaja.listaParova.Count > 0 || prodaja.listaDodatnihUsluga.Count > 0))
+            {
+
+
+                foreach (DodatnaUsluga usluga in prodaja.listaDodatnihUsluga)
+                {
+                    prodaja.listaDodatnihUslugaID.Add(usluga.Id);
+                }
+
+                Projekat.Instance.Prodaja.Add(prodaja);
+
+                Close();
+            }
         }
     }
 }

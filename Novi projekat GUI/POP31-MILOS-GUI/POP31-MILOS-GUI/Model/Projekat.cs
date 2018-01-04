@@ -23,8 +23,10 @@ namespace POP_31.Model
         public ObservableCollection<ProdajaNamestaja> Prodaja;
         public Projekat()
         {
-            Namestaj = GenericSerializer.Deserialize<Namestaj>("Namestaj.xml");
-            TipNamestaja = GenericSerializer.Deserialize<TipNamestaja>("tipoviNamestaja.xml");
+            //Namestaj = GenericSerializer.Deserialize<Namestaj>("Namestaj.xml");
+            //TipNamestaja = GenericSerializer.Deserialize<TipNamestaja>("tipoviNamestaja.xml");
+            TipNamestaja = Model.TipNamestaja.GetAll();
+            Namestaj = Model.Namestaj.GetAll();
             Akcije = GenericSerializer.Deserialize<Akcija>("akcije.xml");
             Korisnici = GenericSerializer.Deserialize<Korisnik>("korisnici.xml");
             DodatneUsluge = GenericSerializer.Deserialize<DodatnaUsluga>("dodatneUsluge.xml");

@@ -42,7 +42,8 @@ namespace POP31_MILOS_GUI.Prozori
         {
             if (dgTipNamestaja.SelectedItem != null)
             {
-                ((TipNamestaja)dgTipNamestaja.SelectedItem).Obrisan = true;
+                
+                TipNamestaja.Delete((TipNamestaja)dgTipNamestaja.SelectedItem);
                 view.Refresh();
             }
         }

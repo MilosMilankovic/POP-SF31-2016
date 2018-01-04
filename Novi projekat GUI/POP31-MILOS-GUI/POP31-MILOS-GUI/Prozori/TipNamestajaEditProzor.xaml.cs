@@ -29,11 +29,11 @@ namespace POP31_MILOS_GUI.Prozori
 
         Operacija operacija;
         TipNamestaja tipNamestajaCopy;
-        TipNamestaja tipNamestajaReal;
+        
         public TipNamestajaEditProzor()
         {
             InitializeComponent();
-            tipNamestajaCopy = new TipNamestaja("");
+            tipNamestajaCopy = new TipNamestaja();
             tbNaziv.DataContext = tipNamestajaCopy;
             operacija = Operacija.DODAVANJE;
         }
@@ -43,23 +43,27 @@ namespace POP31_MILOS_GUI.Prozori
             InitializeComponent();
             tipNamestajaCopy = new TipNamestaja();
             tipNamestajaCopy.Copy(tipNamestaja);
-            tipNamestajaReal = tipNamestaja;
+           
             tbNaziv.DataContext = tipNamestajaCopy;
             operacija = Operacija.IZMENA;
         }
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            
-            if( operacija == Operacija.DODAVANJE)
+            if (tbNaziv.Text !="")
             {
-                Projekat.Instance.TipNamestaja.Add(tipNamestajaCopy);
+
+
+                if (operacija == Operacija.DODAVANJE)
+                {
+                    TipNamestaja.Create(tipNamestajaCopy);
+                }
+                else if (operacija == Operacija.IZMENA)
+                {
+                    TipNamestaja.Update(tipNamestajaCopy);
+                }
+                Close();
             }
-            else if (operacija == Operacija.IZMENA)
-            {
-                tipNamestajaReal.Copy(tipNamestajaCopy);
-            }
-            Close();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

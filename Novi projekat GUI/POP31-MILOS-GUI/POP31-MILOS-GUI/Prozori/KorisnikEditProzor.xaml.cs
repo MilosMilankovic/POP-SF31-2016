@@ -64,15 +64,20 @@ namespace POP31_MILOS_GUI.Prozori
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            if (operacija == Operacija.DODAVANJE)
+            if (tbIme.Text !="" && tbPrezime.Text !="" && tbKorisnickoIme.Text !="" && tbLozinka.Text !="" && cbTipKorisnika.SelectedItem !=null)
             {
-                Projekat.Instance.Korisnici.Add(korisnikCopy); 
+
+
+                if (operacija == Operacija.DODAVANJE)
+                {
+                    Projekat.Instance.Korisnici.Add(korisnikCopy);
+                }
+                else if (operacija == Operacija.IZMENA)
+                {
+                    korisnikReal.Copy(korisnikCopy);
+                }
+                Close();
             }
-            else if (operacija == Operacija.IZMENA)
-            {
-                korisnikReal.Copy(korisnikCopy);
-            }
-            Close();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

@@ -26,11 +26,11 @@
                 <DataGridTextColumn Header="Cena" Binding="{Binding Cena}" Width="1*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="btnDodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="409,189,0,0" VerticalAlignment="Top" Width="75" Click="btnDodaj_Click"/>
-        <Button Name="btnIzmeni" Content="Izmeni" HorizontalAlignment="Left" Margin="409,224,0,0" VerticalAlignment="Top" Width="75" Click="btnIzmeni_Click"/>
-        <Button Name="btnObrisi" Content="Obrisi" HorizontalAlignment="Left" Margin="409,260,0,0" VerticalAlignment="Top" Width="75" Click="btnObrisi_Click"/>
+        <Button Name="btnDodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="409,183,0,0" VerticalAlignment="Top" Width="75" Click="btnDodaj_Click"/>
+        <Button Name="btnIzmeni" Content="Izmeni" HorizontalAlignment="Left" Margin="409,218,0,0" VerticalAlignment="Top" Width="75" Click="btnIzmeni_Click"/>
+        <Button Name="btnObrisi" Content="Obrisi" HorizontalAlignment="Left" Margin="409,253,0,0" VerticalAlignment="Top" Width="75" Click="btnObrisi_Click"/>
         <Button Name="btnUslugaDodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="409,352,0,0" VerticalAlignment="Top" Width="75" Click="btnUslugaDodaj_Click"/>
-        <Button Name="btnUslugaObrisi" Content="Obrisi" HorizontalAlignment="Left" Margin="409,401,0,0" VerticalAlignment="Top" Width="75" Click="btnUslugaObrisi_Click"/>
-        <Button Name="btnKupi" Content="Kupi" HorizontalAlignment="Left" Margin="409,441,0,0" VerticalAlignment="Top" Width="75" Click="btnKupi_Click"/>
+        <Button Name="btnUslugaObrisi" Content="Obrisi" HorizontalAlignment="Left" Margin="409,387,0,0" VerticalAlignment="Top" Width="75" Click="btnUslugaObrisi_Click"/>
+        <Button Name="btnKupi" Content="Kupi" HorizontalAlignment="Left" Margin="409,432,0,0" VerticalAlignment="Top" Width="75" Click="btnKupi_Click"/>
     </Grid>
 </Window>

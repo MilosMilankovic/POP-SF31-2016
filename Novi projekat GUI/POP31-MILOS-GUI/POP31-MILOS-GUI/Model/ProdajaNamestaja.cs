@@ -20,6 +20,8 @@ namespace POP_31.Model
         private int id;
         private DateTime vremeKupovine;
         public ObservableCollection<int> listaDodatnihUslugaID;
+        [XmlIgnore]
+        public ObservableCollection<DodatnaUsluga> listaDodatnihUsluga;
         public ObservableCollection<ParProdaja> listaParova;
 
 
