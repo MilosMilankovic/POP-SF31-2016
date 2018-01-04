@@ -63,7 +63,7 @@ namespace POP31_MILOS_GUI.Prozori
 
                 if (operacija == Operacija.DODAVANJE)
                 {
-                    Projekat.Instance.Akcije.Add(akcijaCopy);
+                    Akcija.Create(akcijaCopy);
                 }
                 if (operacija == Operacija.IZMENA)
                 {

@@ -33,7 +33,7 @@ namespace POP31_MILOS_GUI.Prozori
         {
             InitializeComponent();
 
-            namestajCopy = new Namestaj("","",0,0,0);
+            namestajCopy = new Namestaj();
             tbNaziv.DataContext = namestajCopy;
             tbCena.DataContext = namestajCopy;
             tbKolicina.DataContext = namestajCopy;

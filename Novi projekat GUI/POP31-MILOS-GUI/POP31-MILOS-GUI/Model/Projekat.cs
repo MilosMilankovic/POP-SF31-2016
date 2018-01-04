@@ -27,10 +27,14 @@ namespace POP_31.Model
             //TipNamestaja = GenericSerializer.Deserialize<TipNamestaja>("tipoviNamestaja.xml");
             TipNamestaja = Model.TipNamestaja.GetAll();
             Namestaj = Model.Namestaj.GetAll();
-            Akcije = GenericSerializer.Deserialize<Akcija>("akcije.xml");
-            Korisnici = GenericSerializer.Deserialize<Korisnik>("korisnici.xml");
-            DodatneUsluge = GenericSerializer.Deserialize<DodatnaUsluga>("dodatneUsluge.xml");
-            Salon = GenericSerializer.DeSerializeObject<Salon>("salon.xml");
+            //Akcije = GenericSerializer.Deserialize<Akcija>("akcije.xml");
+            Akcije = Akcija.GetAll();
+            //Korisnici = GenericSerializer.Deserialize<Korisnik>("korisnici.xml");
+            Korisnici = Korisnik.GetAll();
+            //DodatneUsluge = GenericSerializer.Deserialize<DodatnaUsluga>("dodatneUsluge.xml");
+            DodatneUsluge = DodatnaUsluga.GetAll();
+            //Salon = GenericSerializer.DeSerializeObject<Salon>("salon.xml");
+            Salon = Model.Salon.Get();
             Prodaja = GenericSerializer.Deserialize<ProdajaNamestaja>("prodaje.xml");
 
         }

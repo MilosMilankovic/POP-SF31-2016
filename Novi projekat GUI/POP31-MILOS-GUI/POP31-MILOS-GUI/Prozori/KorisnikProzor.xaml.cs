@@ -29,6 +29,15 @@ namespace POP31_MILOS_GUI.Prozori
             view = CollectionViewSource.GetDefaultView(Projekat.Instance.Korisnici);
             view.Filter = HideDeletedFilter;
             dgKorisnik.ItemsSource = view;
+
+
+            if (Projekat.Instance.ulogovaniKorisnik.TipKorisnika == TipKorisnika.Prodavac)
+            {
+                btnDodaj.IsEnabled = false;
+                btnIzmeni.IsEnabled = false;
+                btnObrisi.IsEnabled = false;
+            }
+
         }
         private bool HideDeletedFilter(object obj)
         {
@@ -55,7 +64,7 @@ namespace POP31_MILOS_GUI.Prozori
             
             if(dgKorisnik.SelectedItem != null)
             {
-                ((Korisnik)dgKorisnik.SelectedItem).Obrisan = true;
+                Korisnik.Delete((Korisnik)dgKorisnik.SelectedItem);
                 view.Refresh();
             }
         }

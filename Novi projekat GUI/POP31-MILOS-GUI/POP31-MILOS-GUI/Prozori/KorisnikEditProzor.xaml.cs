@@ -28,12 +28,12 @@ namespace POP31_MILOS_GUI.Prozori
 
         Operacija operacija;
         Korisnik korisnikCopy;
-        Korisnik korisnikReal;
+        
         
         public KorisnikEditProzor()
         {
             InitializeComponent();
-            korisnikCopy = new Korisnik("", "", "", "",0);
+            korisnikCopy = new Korisnik();
 
             tbIme.DataContext = korisnikCopy;
             tbKorisnickoIme.DataContext = korisnikCopy;
@@ -52,7 +52,7 @@ namespace POP31_MILOS_GUI.Prozori
 
             korisnikCopy = new Korisnik();
             korisnikCopy.Copy(korisnik);
-            korisnikReal = korisnik;
+            
             tbIme.DataContext = korisnikCopy;
             tbKorisnickoIme.DataContext = korisnikCopy;
             tbLozinka.DataContext = korisnikCopy;
@@ -70,11 +70,11 @@ namespace POP31_MILOS_GUI.Prozori
 
                 if (operacija == Operacija.DODAVANJE)
                 {
-                    Projekat.Instance.Korisnici.Add(korisnikCopy);
+                    Korisnik.Create(korisnikCopy);
                 }
                 else if (operacija == Operacija.IZMENA)
                 {
-                    korisnikReal.Copy(korisnikCopy);
+                    Korisnik.Update(korisnikCopy);
                 }
                 Close();
             }

@@ -33,7 +33,15 @@ namespace POP31_MILOS_GUI.Prozori
             tbPIB.DataContext = Projekat.Instance.Salon;
             tbTelefon.DataContext = Projekat.Instance.Salon;
             tbZiroRacun.DataContext = Projekat.Instance.Salon;
-            
+
+
+
+            if (Projekat.Instance.ulogovaniKorisnik.TipKorisnika == TipKorisnika.Prodavac)
+            {
+                
+                btnIzmeni.IsEnabled = false;
+              
+            }
         }
 
         private void btnIzmeni_Click(object sender, RoutedEventArgs e)

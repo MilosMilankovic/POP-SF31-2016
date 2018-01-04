@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -145,6 +148,114 @@ namespace POP_31.Model
             this.TipKorisnika = source.TipKorisnika;
             this.Obrisan = source.Obrisan;
         }
-      
+
+        public static Korisnik GetById(int id)
+        {
+            foreach( Korisnik korisnik in Projekat.Instance.Korisnici)
+            {
+                if(korisnik.Id == id)
+                {
+                    return korisnik;
+                }
+            }
+            return null;
+        }
+
+
+        public static ObservableCollection<Korisnik> GetAll()
+        {
+            ObservableCollection<Korisnik> korisnici = new ObservableCollection<Korisnik>();
+
+            using (SqlConnection con = new SqlConnection("Integrated Security=true;Initial Catalog=POP;Data Source=DESKTOP-R18IMBS"))
+            {
+                con.Open();
+
+                SqlCommand cmd = con.CreateCommand();
+                SqlDataAdapter da = new SqlDataAdapter();
+                DataSet ds = new DataSet();
+
+                cmd.CommandText = "SELECT * FROM Korisnik;";
+                da.SelectCommand = cmd;
+                da.Fill(ds, "Korisnik");
+
+                foreach (DataRow row in ds.Tables["Korisnik"].Rows)
+                {
+                    Korisnik k = new Korisnik()
+                    {
+                        Id = Convert.ToInt32(row["Id"]),
+                        Ime = row["Ime"].ToString(),
+                        Prezime = row["Prezime"].ToString(),
+                        KorisnickoIme = row["KorisnickoIme"].ToString(),
+                        Lozinka = row["Lozinka"].ToString(),
+                        TipKorisnika = (row["TipKorisnika"].ToString() == "Administrator") ? TipKorisnika.Administrator : TipKorisnika.Prodavac,
+                        Obrisan = bool.Parse(row["Obrisan"].ToString())
+                    };
+                    korisnici.Add(k);
+                }
+            }
+            return korisnici;
+        }
+
+        public static Korisnik Create(Korisnik k)
+        {
+            using (var con = new SqlConnection("Integrated Security=true;Initial Catalog=POP;Data Source=DESKTOP-R18IMBS"))
+            {
+                con.Open();
+
+                SqlCommand cmd = con.CreateCommand();
+
+                cmd.CommandText = "INSERT INTO Korisnik (Ime, Prezime, KorisnickoIme, Lozinka, TipKorisnika, Obrisan) VALUES (@Ime,@Prezime,@KorisnickoIme,@Lozinka, @TipKorisnika, @Obrisan);";
+                cmd.CommandText += "SELECT SCOPE_IDENTITY();";
+                cmd.Parameters.AddWithValue("Ime", k.Ime);
+                cmd.Parameters.AddWithValue("Prezime", k.Prezime);
+                cmd.Parameters.AddWithValue("KorisnickoIme", k.KorisnickoIme);
+                cmd.Parameters.AddWithValue("Lozinka", k.Lozinka);
+                cmd.Parameters.AddWithValue("Obrisan", k.Obrisan);
+                cmd.Parameters.AddWithValue("TipKorisnika", k.TipKorisnika.ToString());
+
+
+                k.Id = int.Parse(cmd.ExecuteScalar().ToString());
+            }
+
+
+            Projekat.Instance.Korisnici.Add(k);
+
+            return k;
+        }
+
+        public static void Update(Korisnik k)
+        {
+            using (var con = new SqlConnection("Integrated Security=true;Initial Catalog=POP;Data Source=DESKTOP-R18IMBS"))
+            {
+                con.Open();
+
+                SqlCommand cmd = con.CreateCommand();
+
+                cmd.CommandText = "UPDATE Korisnik SET Ime=@Ime, Prezime=@Prezime, KorisnickoIme=@KorisnickoIme, Lozinka=@Lozinka, TipKorisnika=@TipKorisnika, Obrisan=@Obrisan WHERE Id=@Id;";
+                cmd.CommandText += "SELECT SCOPE_IDENTITY();";
+
+                cmd.Parameters.AddWithValue("Id", k.Id);
+                cmd.Parameters.AddWithValue("Ime", k.Ime);
+                cmd.Parameters.AddWithValue("Prezime", k.Prezime);
+                cmd.Parameters.AddWithValue("KorisnickoIme", k.KorisnickoIme);
+                cmd.Parameters.AddWithValue("Lozinka", k.Lozinka);
+                cmd.Parameters.AddWithValue("TipKorisnika", k.TipKorisnika.ToString());
+                cmd.Parameters.AddWithValue("Obrisan", k.Obrisan);
+
+                cmd.ExecuteNonQuery();
+            }
+
+            // Update model
+            Korisnik.GetById(k.Id).Copy(k);
+        }
+
+        public static void Delete(Korisnik k)
+        {
+            k.Obrisan = true;
+            
+            Update(k);
+        }
+
+
     }
 }

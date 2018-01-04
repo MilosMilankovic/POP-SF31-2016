@@ -29,12 +29,12 @@ namespace POP31_MILOS_GUI.Prozori
 
         private Operacija operacija;
         DodatnaUsluga dodatnaUslugaCopy;
-        DodatnaUsluga dodatnaUslugaReal;
+
 
         public DodatnaUslugaEditProzor()
         {
             InitializeComponent();
-            dodatnaUslugaCopy = new DodatnaUsluga("", 0);
+            dodatnaUslugaCopy = new DodatnaUsluga();
 
             tbNaziv.DataContext = dodatnaUslugaCopy;
             tbCena.DataContext = dodatnaUslugaCopy;
@@ -48,7 +48,7 @@ namespace POP31_MILOS_GUI.Prozori
             dodatnaUslugaCopy = new DodatnaUsluga();
             dodatnaUslugaCopy.Copy(dodatnaUsluga);
 
-            dodatnaUslugaReal = dodatnaUsluga;
+      
             tbNaziv.DataContext = dodatnaUslugaCopy;
             tbCena.DataContext = dodatnaUslugaCopy;
 
@@ -63,11 +63,11 @@ namespace POP31_MILOS_GUI.Prozori
 
                 if (operacija == Operacija.DODAVANJE)
                 {
-                    Projekat.Instance.DodatneUsluge.Add(dodatnaUslugaCopy);
+                    DodatnaUsluga.Create(dodatnaUslugaCopy);
                 }
                 else if (operacija == Operacija.IZMENA)
                 {
-                    dodatnaUslugaReal.Copy(dodatnaUslugaCopy);
+                    DodatnaUsluga.Update(dodatnaUslugaCopy);
                 }
                 Close();
             }

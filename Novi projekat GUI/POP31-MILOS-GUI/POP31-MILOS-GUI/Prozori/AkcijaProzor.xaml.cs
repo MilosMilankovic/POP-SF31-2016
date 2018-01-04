@@ -31,6 +31,13 @@ namespace POP31_MILOS_GUI.Prozori
             view.Filter = HideDeletedFilter;
             dgAkcija.ItemsSource = view;
 
+            if(Projekat.Instance.ulogovaniKorisnik.TipKorisnika == TipKorisnika.Prodavac)
+            {
+                btnDodaj.IsEnabled = false;
+                btnIzmeni.IsEnabled = false;
+                btnObrisi.IsEnabled = false;
+            }
+
         }
         private bool HideDeletedFilter(object obj)
         {

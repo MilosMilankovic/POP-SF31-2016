@@ -46,7 +46,7 @@ namespace POP31_MILOS_GUI.Prozori
             if (tbNaziv.Text !="" && tbAdresa.Text !="" && tbAdresaSajta.Text !="" && int.TryParse(tbMaticniBroj.Text, out var x)&& int.TryParse(tbPIB.Text,out var y)&& tbZiroRacun.Text !="")
             {
 
-                Projekat.Instance.Salon.Copy(salonCopy);
+                Salon.Update(salonCopy);
                 Close();
             }
         }
