@@ -70,7 +70,7 @@ namespace POP_31.Model
 
         private bool obrisan;
 
-         public bool Obrisan
+        public bool Obrisan
         {
             get { return obrisan; }
             set
@@ -79,6 +79,19 @@ namespace POP_31.Model
                 OnPropertyChanged("Obrisan");
             }
         }
+
+        public static Akcija GetById(int id)
+        {
+            foreach(Akcija akcija in Projekat.Instance.Akcije)
+            {
+                if(akcija.Id == id)
+                {
+                    return akcija;
+                }
+            }
+            return null;
+        }
+
 
         public static double GetPopustByNamestaj(Namestaj namestaj)  //trazi popust za namestaj
         {
@@ -212,12 +225,12 @@ namespace POP_31.Model
                 SqlCommand cmd = con.CreateCommand();
                 SqlCommand cmd2 = con.CreateCommand();
 
-                cmd.CommandText = "INSERT INTO Akcija (Naziv,DatumPocetka, DatumKraja,Obrisan) VALUES (@Naziv,@DatumPocetka,@DatumKraja, @Obrisan);";
-
+                cmd.CommandText = "INSERT INTO Akcija (Naziv,DatumPocetka, DatumKraja,Obrisan) VALUES (@Naziv,@DatumPocetka,@DatumKraja, 0);";
+                //cmd.CommandText = "INSERT INTO Akcija (Naziv,DatumPocetka,DatumKraja,Obrisan) VALUES (@Naziv,'2017-01-12T00:00:00', '2018-01-02T00:00:00', @Obrisan);";
                 cmd.CommandText += "SELECT SCOPE_IDENTITY();";
                 cmd.Parameters.AddWithValue("Naziv", a.Naziv);
-                cmd.Parameters.AddWithValue("DatumPocetka", a.Pocetak.ToLongDateString() + "T" + a.Pocetak.ToLongTimeString());
-                cmd.Parameters.AddWithValue("DatumKraja", a.Kraj.ToLongDateString() + "T" + a.Kraj.ToLongTimeString());
+                cmd.Parameters.AddWithValue("DatumPocetka", a.Pocetak);
+                cmd.Parameters.AddWithValue("DatumKraja", a.Kraj);
                 cmd.Parameters.AddWithValue("Obrisan", a.Obrisan);
 
                 
@@ -241,38 +254,27 @@ namespace POP_31.Model
 
             return a;
         }
-        /*
-        public static void Update(DodatnaUsluga du)
+        
+        public static void Update(Akcija a)
         {
-            using (var con = new SqlConnection("Integrated Security=true;Initial Catalog=POP;Data Source=DESKTOP-R18IMBS"))
-            {
-                con.Open();
+            a.Obrisan = true;
 
-                SqlCommand cmd = con.CreateCommand();
+            Create(a);
 
-                cmd.CommandText = "UPDATE DodatnaUsluga SET Naziv=@Naziv, Cena=@Cena, Obrisan=@Obrisan WHERE Id=@Id;";
-                cmd.CommandText += "SELECT SCOPE_IDENTITY();";
-
-                cmd.Parameters.AddWithValue("Id", du.Id);
-                cmd.Parameters.AddWithValue("Naziv", du.Naziv);
-                cmd.Parameters.AddWithValue("Cena", du.Cena);
-                cmd.Parameters.AddWithValue("Obrisan", du.Obrisan);
-
-                cmd.ExecuteNonQuery();
-            }
+            //Delete(a);
 
             // Update model
-            DodatnaUsluga.GetById(du.Id).Copy(du);
+            
         }
 
-        public static void Delete(DodatnaUsluga du)
+        public static void Delete(Akcija a)
         {
-            du.Obrisan = true;
+            a.Obrisan = true;
 
-            Update(du);
+            Update(a);
         }
 
-    */
+    
 
     
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POP31_MILOS_GUI.Prozori"
         mc:Ignorable="d"
-        Title="KorisnikProzor" Height="300" Width="450" Background="Aquamarine">
+        Title="KorisnikProzor" Height="370" Width="450" Background="Aquamarine">
     <Grid>
         <DataGrid Name="dgKorisnik" HorizontalAlignment="Stretch" Height="220" Margin="5,5,5,0" VerticalAlignment="Top"  AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" SelectionMode="Single" IsReadOnly="True" HeadersVisibility="Column">
             <DataGrid.Columns>
@@ -22,5 +22,13 @@
         <Button Name="btnIzmeni" Content="Izmeni" HorizontalAlignment="Left" Margin="186,241,0,0" VerticalAlignment="Top" Width="75" Click="btnIzmeni_Click"/>
         <Button Name="btnObrisi" Content="Obrisi" HorizontalAlignment="Left" Margin="340,241,0,0" VerticalAlignment="Top" Width="75" Click="btnObrisi_Click"/>
 
+        <TextBox Name="tbPretraga" HorizontalAlignment="Left" Height="23" Margin="98,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="tbPretraga_TextChanged"/>
+        <Label Content="Pretraga:" HorizontalAlignment="Left" Margin="33,286,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cbIzbor" SelectedIndex="0" HorizontalAlignment="Left" Margin="254,286,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbIzbor_SelectionChanged">
+            <ComboBoxItem>Ime</ComboBoxItem>
+            <ComboBoxItem>Prezime</ComboBoxItem>
+            <ComboBoxItem>Korisnicko ime</ComboBoxItem>
+        </ComboBox>
+        
     </Grid>
 </Window>

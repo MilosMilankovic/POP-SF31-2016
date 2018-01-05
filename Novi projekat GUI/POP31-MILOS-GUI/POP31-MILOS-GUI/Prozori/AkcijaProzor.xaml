@@ -18,5 +18,7 @@
         <Button Name="btnDodaj" Content="Dodaj" HorizontalAlignment="Left" Margin="50,291,0,0" VerticalAlignment="Top" Width="75" Click="btnDodaj_Click"/>
         <Button Name="btnIzmeni" Content="Izmeni" HorizontalAlignment="Left" Margin="171,291,0,0" VerticalAlignment="Top" Width="75" Click="btnIzmeni_Click"/>
         <Button Name="btnObrisi" Content="Obrisi" HorizontalAlignment="Left" Margin="277,291,0,0" VerticalAlignment="Top" Width="75" Click="btnObrisi_Click"/>
+        <CheckBox Name="cbAkcija" Content="Prikazi aktuelne akcije" HorizontalAlignment="Left" Margin="171,239,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked"/>
+
     </Grid>
 </Window>

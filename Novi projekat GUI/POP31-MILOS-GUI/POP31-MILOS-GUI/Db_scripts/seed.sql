@@ -43,10 +43,10 @@ Values('Lenovo','Danila Kis', '2031-231', 'wae@gmail.com', 'www.lenovo.com', 231
 --AKCIJA--
 
 INSERT INTO Akcija(Naziv, DatumPocetka, DatumKraja, Obrisan)
-Values ('Prolecna', '2017-01-12T00:00:00', '2018-01-02T00:00:00', 0);
+Values ('Prolecna', '2017-01-12', '2018-01-02', 0);
 
 INSERT INTO Akcija(Naziv, DatumPocetka, DatumKraja, Obrisan)
-Values ('Zimska', '2018-01-01T00:00:00', '2018-03-01T00:00:00', 0);
+Values ('Zimska', '2018-01-01', '2018-03-01', 0);
 
 ---NA AKCIJI---
 

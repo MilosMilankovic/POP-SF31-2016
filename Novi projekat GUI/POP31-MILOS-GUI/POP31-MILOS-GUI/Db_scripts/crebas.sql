@@ -57,8 +57,8 @@ CREATE TABLE Akcija
 (
 	Id INT PRIMARY KEY IDENTITY(1, 1),
 	Naziv VARCHAR(20) not null,
-	DatumPocetka datetime,
-	DatumKraja datetime,
+	DatumPocetka DATE,
+	DatumKraja DATE,
 	Obrisan BIT
 
 )

@@ -25,10 +25,11 @@ namespace POP31_MILOS_GUI.Prozori
         ICollectionView view;
         public AkcijaProzor()
         {
+            view = CollectionViewSource.GetDefaultView(Projekat.Instance.Akcije);
             InitializeComponent();
 
-            view = CollectionViewSource.GetDefaultView(Projekat.Instance.Akcije);
-            view.Filter = HideDeletedFilter;
+            
+            view.Filter = Filter;
             dgAkcija.ItemsSource = view;
 
             if(Projekat.Instance.ulogovaniKorisnik.TipKorisnika == TipKorisnika.Prodavac)
@@ -39,9 +40,25 @@ namespace POP31_MILOS_GUI.Prozori
             }
 
         }
-        private bool HideDeletedFilter(object obj)
+        private bool Filter(object obj)
         {
-            return !((Akcija)obj).Obrisan;   // nemoj prikazati ako je obrisan
+            if (((Akcija)obj).Obrisan == false)
+            {
+                if (cbAkcija.IsChecked == true)
+                {
+
+
+
+                    if (((Akcija)obj).Pocetak > DateTime.Now || ((Akcija)obj).Kraj < DateTime.Now)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+
+              
+            }
+            return false;
         }
 
         private void btnDodaj_Click(object sender, RoutedEventArgs e)
@@ -68,6 +85,11 @@ namespace POP31_MILOS_GUI.Prozori
                 ((Akcija)dgAkcija.SelectedItem).Obrisan = true;
                 view.Refresh();
             }
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            view.Refresh();
         }
     }
 }

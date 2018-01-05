@@ -24,10 +24,12 @@ namespace POP31_MILOS_GUI.Prozori
         ICollectionView view;
         public KorisnikProzor()
         {
-            InitializeComponent();
 
             view = CollectionViewSource.GetDefaultView(Projekat.Instance.Korisnici);
-            view.Filter = HideDeletedFilter;
+            InitializeComponent();
+
+            
+            view.Filter = Filter;
             dgKorisnik.ItemsSource = view;
 
 
@@ -39,9 +41,26 @@ namespace POP31_MILOS_GUI.Prozori
             }
 
         }
-        private bool HideDeletedFilter(object obj)
+        private bool Filter(object obj)
         {
-            return !((Korisnik)obj).Obrisan;   // nemoj prikazati ako je obrisan
+            if (((Korisnik)obj).Obrisan == false)
+            {
+                var text = ((ComboBoxItem)cbIzbor.SelectedItem).Content.ToString(); //uzimammo text iz cb
+                if (text.Equals("Ime"))
+                {
+                    return ((Korisnik)obj).Ime.IndexOf(tbPretraga.Text, StringComparison.OrdinalIgnoreCase) >= 0;
+                }
+                else if (text.Equals("Prezime"))
+                {
+                    return ((Korisnik)obj).Prezime.IndexOf(tbPretraga.Text, StringComparison.OrdinalIgnoreCase) >= 0;
+                }
+                else if (text.Equals("Korisnicko ime"))
+                {
+                    return ((Korisnik)obj).KorisnickoIme.IndexOf(tbPretraga.Text, StringComparison.OrdinalIgnoreCase) >= 0;
+                }
+                return false;
+            }
+            return false;
         }
 
         private void btnDodaj_Click(object sender, RoutedEventArgs e)
@@ -67,6 +86,16 @@ namespace POP31_MILOS_GUI.Prozori
                 Korisnik.Delete((Korisnik)dgKorisnik.SelectedItem);
                 view.Refresh();
             }
+        }
+
+        private void tbPretraga_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            view.Refresh();
+        }
+
+        private void cbIzbor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            view.Refresh();
         }
     }
 }

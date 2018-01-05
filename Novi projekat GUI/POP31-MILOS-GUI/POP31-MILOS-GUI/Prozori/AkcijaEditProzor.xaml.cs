@@ -30,7 +30,7 @@ namespace POP31_MILOS_GUI.Prozori
 
         Operacija operacija;
         Akcija akcijaCopy;
-        Akcija akcijaReal;
+       
         public AkcijaEditProzor()
         {
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace POP31_MILOS_GUI.Prozori
             InitializeComponent();
             akcijaCopy = new Akcija();
             akcijaCopy.Copy(akcija);
-            akcijaReal = akcija;
+          
             tbNaziv.DataContext = akcijaCopy;
             dpPocetak.DataContext = akcijaCopy;
             dpKraj.DataContext = akcijaCopy;
@@ -67,7 +67,7 @@ namespace POP31_MILOS_GUI.Prozori
                 }
                 if (operacija == Operacija.IZMENA)
                 {
-                    akcijaReal.Copy(akcijaCopy);
+                    Akcija.Update(akcijaCopy);
                 }
                 Close();
             }

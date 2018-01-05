@@ -25,9 +25,10 @@ namespace POP31_MILOS_GUI.Prozori
         ICollectionView view;
         public NamestajProzor()
         {
-            InitializeComponent();
             view = CollectionViewSource.GetDefaultView(Projekat.Instance.Namestaj);
-            view.Filter = HideDeletedFilter;
+            InitializeComponent();
+            
+            view.Filter = Filter;
             dgNamestaj.ItemsSource = view;
 
 
@@ -38,9 +39,26 @@ namespace POP31_MILOS_GUI.Prozori
                 btnObrisi.IsEnabled = false;
             }
         }
-        private bool HideDeletedFilter(object obj)
+        private bool Filter(object obj)
         {
-            return !((Namestaj)obj).Obrisan;   // nemoj prikazati ako je obrisan
+            if (((Namestaj)obj).Obrisan == false)
+            {
+                var text = ((ComboBoxItem)cbIzbor.SelectedItem).Content.ToString(); //uzimammo text iz cb
+                if (text.Equals("Tip"))
+                {
+                    return ((Namestaj)obj).TipNamestaja.Naziv.IndexOf(tbPretraga.Text, StringComparison.OrdinalIgnoreCase) >= 0;
+                }
+                else if (text.Equals("Sifra"))
+                {
+                    return ((Namestaj)obj).Sifra.IndexOf(tbPretraga.Text, StringComparison.OrdinalIgnoreCase) >= 0;
+                }
+                else if (text.Equals("Naziv"))
+                {
+                    return ((Namestaj)obj).Naziv.IndexOf(tbPretraga.Text, StringComparison.OrdinalIgnoreCase) >= 0;
+                }
+                return false;
+            }
+            return false;
         }
 
         private void btnDodaj_Click(object sender, RoutedEventArgs e)
@@ -70,6 +88,16 @@ namespace POP31_MILOS_GUI.Prozori
                 ((Namestaj)dgNamestaj.SelectedItem).Obrisan = true;
                 view.Refresh();
             }
+        }
+
+        private void tbPretraga_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            view.Refresh();
+        }
+
+        private void cbIzbor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            view.Refresh();
         }
     }
 }
