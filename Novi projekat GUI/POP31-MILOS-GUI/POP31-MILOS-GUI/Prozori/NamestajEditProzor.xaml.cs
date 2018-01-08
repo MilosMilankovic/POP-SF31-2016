@@ -34,11 +34,11 @@ namespace POP31_MILOS_GUI.Prozori
             InitializeComponent();
 
             namestajCopy = new Namestaj();
-            tbNaziv.DataContext = namestajCopy;
+            tbNaziv.DataContext = namestajCopy; 
             tbCena.DataContext = namestajCopy;
             tbKolicina.DataContext = namestajCopy;
             tbSifra.DataContext = namestajCopy;
-            cbTip.ItemsSource = Projekat.Instance.TipNamestaja;
+            cbTip.ItemsSource = Projekat.Instance.TipNamestaja;  
 
             cbTip.DataContext = namestajCopy;
 
@@ -56,7 +56,7 @@ namespace POP31_MILOS_GUI.Prozori
             tbKolicina.DataContext = namestajCopy;
             tbSifra.DataContext = namestajCopy;
             cbTip.ItemsSource = Projekat.Instance.TipNamestaja;
-            cbTip.SelectedItem = namestajCopy.TipNamestaja; //trazimo objekat,ispise koji je tip namestaj
+            cbTip.SelectedItem = namestajCopy.TipNamestaja; 
             cbTip.DataContext = namestajCopy;
 
             operacija = Operacija.IZMENA;

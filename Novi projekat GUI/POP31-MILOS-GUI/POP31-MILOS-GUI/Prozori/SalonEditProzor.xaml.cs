@@ -21,7 +21,7 @@ namespace POP31_MILOS_GUI.Prozori
     public partial class SalonEditProzor : Window
     {
         Salon salonCopy;
-        public SalonEditProzor()
+        public SalonEditProzor() 
         {
             
 
@@ -29,7 +29,7 @@ namespace POP31_MILOS_GUI.Prozori
 
             salonCopy = new Salon();
 
-            salonCopy.Copy(Projekat.Instance.Salon);
+            salonCopy.Copy(Projekat.Instance.Salon); 
 
             tbAdresa.DataContext = salonCopy;
             tbAdresaSajta.DataContext = salonCopy;
@@ -46,7 +46,7 @@ namespace POP31_MILOS_GUI.Prozori
             if (tbNaziv.Text !="" && tbAdresa.Text !="" && tbAdresaSajta.Text !="" && int.TryParse(tbMaticniBroj.Text, out var x)&& int.TryParse(tbPIB.Text,out var y)&& tbZiroRacun.Text !="")
             {
 
-                Salon.Update(salonCopy);
+                Salon.Update(salonCopy); 
                 Close();
             }
         }

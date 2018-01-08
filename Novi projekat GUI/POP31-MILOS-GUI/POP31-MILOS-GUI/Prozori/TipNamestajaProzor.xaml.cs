@@ -35,7 +35,7 @@ namespace POP31_MILOS_GUI.Prozori
 
         private bool HideDeletedFilter(object obj)
         {
-            return !((TipNamestaja)obj).Obrisan;   // nemoj prikazati ako je obrisan
+            return !((TipNamestaja)obj).Obrisan;   
         }
 
         private void btnObrisi_Click(object sender, RoutedEventArgs e)

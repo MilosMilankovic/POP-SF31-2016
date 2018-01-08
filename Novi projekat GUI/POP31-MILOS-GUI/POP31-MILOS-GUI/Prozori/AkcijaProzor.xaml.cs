@@ -28,11 +28,11 @@ namespace POP31_MILOS_GUI.Prozori
             view = CollectionViewSource.GetDefaultView(Projekat.Instance.Akcije);
             InitializeComponent();
 
-            
+
             view.Filter = Filter;
             dgAkcija.ItemsSource = view;
 
-            if(Projekat.Instance.ulogovaniKorisnik.TipKorisnika == TipKorisnika.Prodavac)
+            if (Projekat.Instance.ulogovaniKorisnik.TipKorisnika == TipKorisnika.Prodavac)
             {
                 btnDodaj.IsEnabled = false;
                 btnIzmeni.IsEnabled = false;
@@ -55,8 +55,6 @@ namespace POP31_MILOS_GUI.Prozori
                     }
                 }
                 return true;
-
-              
             }
             return false;
         }
@@ -69,20 +67,20 @@ namespace POP31_MILOS_GUI.Prozori
 
         private void btnIzmeni_Click(object sender, RoutedEventArgs e)
         {
-            
-            if(dgAkcija.SelectedItem != null)
+
+            if (dgAkcija.SelectedItem != null)
             {
                 AkcijaEditProzor prozor = new AkcijaEditProzor((Akcija)dgAkcija.SelectedItem);
-                prozor.Show();
+                prozor.ShowDialog();
+                view.Refresh();
             }
-            
         }
 
         private void btnObrisi_Click(object sender, RoutedEventArgs e)
         {
-           if(dgAkcija.SelectedItem != null)
+            if (dgAkcija.SelectedItem != null)
             {
-                ((Akcija)dgAkcija.SelectedItem).Obrisan = true;
+                Akcija.Delete((Akcija)dgAkcija.SelectedItem);
                 view.Refresh();
             }
         }

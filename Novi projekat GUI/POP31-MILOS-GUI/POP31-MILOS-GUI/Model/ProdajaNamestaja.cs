@@ -21,8 +21,8 @@ namespace POP_31.Model
         private DateTime vremeKupovine;
         public ObservableCollection<int> listaDodatnihUslugaID;
         [XmlIgnore]
-        public ObservableCollection<DodatnaUsluga> listaDodatnihUsluga;
-        public ObservableCollection<ParProdaja> listaParova;
+        public ObservableCollection<DodatnaUsluga> listaDodatnihUsluga; 
+        public ObservableCollection<ParProdaja> listaParova;  
 
 
         public ObservableCollection<DodatnaUsluga> ListaDodatnihUsluga
@@ -90,7 +90,7 @@ namespace POP_31.Model
         }
 
        
-        public double UkupnaCena
+        public double UkupnaCena 
         {
             get
             {
@@ -136,7 +136,7 @@ namespace POP_31.Model
         }
 
         [XmlIgnore]
-        public Namestaj Namestaj
+        public Namestaj Namestaj  
         {
             get { return Namestaj.GetById(namestajId); }
             set
@@ -147,7 +147,7 @@ namespace POP_31.Model
             }
         }
 
-        public int NamestajId
+        public int NamestajId  
         {
             get { return namestajId; }
             set

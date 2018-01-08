@@ -30,11 +30,11 @@ namespace POP31_MILOS_GUI.Prozori
 
         Operacija operacija;
         Akcija akcijaCopy;
-       
+
         public AkcijaEditProzor()
         {
             InitializeComponent();
-            akcijaCopy = new Akcija("",DateTime.Now,DateTime.Now.AddDays(1),new ObservableCollection<Par>());
+            akcijaCopy = new Akcija();
             tbNaziv.DataContext = akcijaCopy;
             dpPocetak.DataContext = akcijaCopy;
             dpKraj.DataContext = akcijaCopy;
@@ -48,7 +48,7 @@ namespace POP31_MILOS_GUI.Prozori
             InitializeComponent();
             akcijaCopy = new Akcija();
             akcijaCopy.Copy(akcija);
-          
+
             tbNaziv.DataContext = akcijaCopy;
             dpPocetak.DataContext = akcijaCopy;
             dpKraj.DataContext = akcijaCopy;
@@ -58,7 +58,7 @@ namespace POP31_MILOS_GUI.Prozori
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            if (akcijaCopy.ListaParova.Count > 0 && tbNaziv.Text !="")
+            if (akcijaCopy.ListaParova.Count > 0 && tbNaziv.Text != "")
             {
 
                 if (operacija == Operacija.DODAVANJE)
@@ -80,8 +80,8 @@ namespace POP31_MILOS_GUI.Prozori
 
         private void btnIzmeni_Click(object sender, RoutedEventArgs e)
         {
-            
-            if(dgPar.SelectedItem != null)
+
+            if (dgPar.SelectedItem != null)
             {
                 AkcijaEditPar prozor = new AkcijaEditPar((Par)dgPar.SelectedItem, akcijaCopy);
                 prozor.Show();
@@ -99,7 +99,7 @@ namespace POP31_MILOS_GUI.Prozori
             if (dgPar.SelectedItem != null)
             {
                 akcijaCopy.ListaParova.Remove((Par)dgPar.SelectedItem);
-                
+
             }
         }
     }

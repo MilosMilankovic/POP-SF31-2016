@@ -32,6 +32,8 @@ namespace POP_31.Model
         public Akcija()
         {
             this.listaParova = new ObservableCollection<Par>();
+            this.Pocetak = DateTime.Now;
+            this.Kraj = DateTime.Now.AddDays(1);
         }
 
         public Akcija(string naziv, DateTime pocetak, DateTime kraj, ObservableCollection<Par> listaParova)
@@ -82,9 +84,9 @@ namespace POP_31.Model
 
         public static Akcija GetById(int id)
         {
-            foreach(Akcija akcija in Projekat.Instance.Akcije)
+            foreach (Akcija akcija in Projekat.Instance.Akcije)
             {
-                if(akcija.Id == id)
+                if (akcija.Id == id)
                 {
                     return akcija;
                 }
@@ -93,15 +95,15 @@ namespace POP_31.Model
         }
 
 
-        public static double GetPopustByNamestaj(Namestaj namestaj)  //trazi popust za namestaj
+        public static double GetPopustByNamestaj(Namestaj namestaj) 
         {
-            foreach(Akcija akcija in Projekat.Instance.Akcije)
+            foreach (Akcija akcija in Projekat.Instance.Akcije)
             {
                 if (akcija.Obrisan == false)
                 {
-                    foreach(Par par in akcija.ListaParova)
+                    foreach (Par par in akcija.ListaParova)
                     {
-                        if(par.NamestajId == namestaj.Id)
+                        if (par.NamestajId == namestaj.Id)
                         {
                             return par.Popust;
                         }
@@ -121,7 +123,7 @@ namespace POP_31.Model
             }
 
         }
-        
+
 
         private DateTime pocetak;
 
@@ -215,25 +217,23 @@ namespace POP_31.Model
             }
             return akcije;
         }
-        
+
         public static Akcija Create(Akcija a)
         {
             using (var con = new SqlConnection("Integrated Security=true;Initial Catalog=POP;Data Source=DESKTOP-R18IMBS"))
             {
+
                 con.Open();
 
                 SqlCommand cmd = con.CreateCommand();
                 SqlCommand cmd2 = con.CreateCommand();
 
-                cmd.CommandText = "INSERT INTO Akcija (Naziv,DatumPocetka, DatumKraja,Obrisan) VALUES (@Naziv,@DatumPocetka,@DatumKraja, 0);";
-                //cmd.CommandText = "INSERT INTO Akcija (Naziv,DatumPocetka,DatumKraja,Obrisan) VALUES (@Naziv,'2017-01-12T00:00:00', '2018-01-02T00:00:00', @Obrisan);";
+                cmd.CommandText = "INSERT INTO Akcija (Naziv,DatumPocetka, DatumKraja,Obrisan) VALUES (@Naziv, @DatumPocetka, @DatumKraja, 0);";
                 cmd.CommandText += "SELECT SCOPE_IDENTITY();";
                 cmd.Parameters.AddWithValue("Naziv", a.Naziv);
                 cmd.Parameters.AddWithValue("DatumPocetka", a.Pocetak);
                 cmd.Parameters.AddWithValue("DatumKraja", a.Kraj);
-                cmd.Parameters.AddWithValue("Obrisan", a.Obrisan);
 
-                
                 a.Id = int.Parse(cmd.ExecuteScalar().ToString());
 
                 foreach (Par par in a.listaParova)
@@ -242,50 +242,44 @@ namespace POP_31.Model
 
                     cmd2.CommandText += "SELECT SCOPE_IDENTITY();";
                     cmd2.Parameters.AddWithValue("IdAkcija", a.Id);
-                    cmd2.Parameters.AddWithValue("IdNamestaj", par.NamestajId );
+                    cmd2.Parameters.AddWithValue("IdNamestaj", par.NamestajId);
                     cmd2.Parameters.AddWithValue("Popust", par.Popust);
 
                     cmd2.ExecuteScalar();
+
+                    cmd2.Parameters.Clear();
                 }
+
+                Projekat.Instance.Akcije.Add(a);
+
+                return a;
             }
-
-
-            Projekat.Instance.Akcije.Add(a);
-
-            return a;
         }
-        
+
         public static void Update(Akcija a)
         {
-            a.Obrisan = true;
+            Akcija.Delete(a);
 
             Create(a);
-
-            //Delete(a);
-
-            // Update model
-            
         }
 
         public static void Delete(Akcija a)
         {
-            a.Obrisan = true;
+            Akcija.GetById(a.Id).Obrisan = true;
+            using (var con = new SqlConnection("Integrated Security=true;Initial Catalog=POP;Data Source=DESKTOP-R18IMBS"))
+            {
+                con.Open();
 
-            Update(a);
+                SqlCommand cmd = con.CreateCommand();
+
+                cmd.CommandText = "UPDATE Akcija SET Obrisan=1 WHERE Id=" + a.Id + ";";
+
+                cmd.ExecuteNonQuery();
+            }
         }
-
-    
-
-    
-
-
-
-
-
-
     }
 
-    public class Par  : INotifyPropertyChanged    // za popust
+    public class Par : INotifyPropertyChanged    // za popust
     {
         double popust;
         int namestajId;
@@ -309,7 +303,7 @@ namespace POP_31.Model
             {
                 namestajId = value.Id;
                 OnPropertyChanged("Namestaj");
-                
+
             }
         }
 
@@ -336,7 +330,7 @@ namespace POP_31.Model
                 OnPropertyChanged("Popust");
             }
         }
-        
+
         public void Copy(Par source)
         {
             this.NamestajId = source.NamestajId;
@@ -354,7 +348,7 @@ namespace POP_31.Model
         }
 
 
-        
+
 
 
 

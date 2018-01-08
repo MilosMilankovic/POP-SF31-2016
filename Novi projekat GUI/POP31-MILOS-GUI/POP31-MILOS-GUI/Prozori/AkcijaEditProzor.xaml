@@ -12,7 +12,7 @@
         <DatePicker Name="dpPocetak" FirstDayOfWeek="Monday" SelectedDate="{Binding Pocetak, StringFormat=dd/MM/yyyy}" HorizontalAlignment="Left" Margin="203,89,0,0" VerticalAlignment="Top"/>
         <DatePicker Name="dpKraj" FirstDayOfWeek="Monday" SelectedDate="{Binding Kraj, StringFormat=dd/MM/yyyy}" HorizontalAlignment="Left" Margin="203,143,0,0" VerticalAlignment="Top"/>
         <Label Content="Datum pocetka:" HorizontalAlignment="Left" Margin="52,87,0,0" VerticalAlignment="Top"/>
-        <Label Content="Datum kraja" HorizontalAlignment="Left" Margin="94,143,0,0" VerticalAlignment="Top"/>
+        <Label Content="Datum kraja" HorizontalAlignment="Left" Margin="52,141,0,0" VerticalAlignment="Top"/>
         <DataGrid Name="dgPar" HorizontalAlignment="Stretch" Margin="15,174,188.6,96.4" Height="200" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" SelectionMode="Single" IsReadOnly="True" HeadersVisibility="Column" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding NamestajId}" Width="1*"/>

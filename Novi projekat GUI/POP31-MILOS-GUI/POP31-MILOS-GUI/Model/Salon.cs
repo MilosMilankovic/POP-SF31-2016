@@ -132,18 +132,7 @@ namespace POP_31.Model
         }
 
         public Salon() { }
-        public Salon(string naziv, string adresa, string telefon, string email, string adresaSajta, int pib, int maticniBroj, string ziroRacun)
-        {
-            this.Naziv = naziv;
-            this.Adresa = adresa;
-            this.Telefon = telefon;
-            this.Email = email;
-            this.AdresaSajta = adresaSajta;
-            this.PIB = pib;
-            this.MaticniBroj = maticniBroj;
-            this.ZiroRacun = ziroRacun;
-            
-        }
+        
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {

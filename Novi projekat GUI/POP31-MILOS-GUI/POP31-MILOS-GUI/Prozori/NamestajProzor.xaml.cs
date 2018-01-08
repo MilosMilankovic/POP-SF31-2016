@@ -25,11 +25,11 @@ namespace POP31_MILOS_GUI.Prozori
         ICollectionView view;
         public NamestajProzor()
         {
-            view = CollectionViewSource.GetDefaultView(Projekat.Instance.Namestaj);
+            view = CollectionViewSource.GetDefaultView(Projekat.Instance.Namestaj); //filtriramo da nam ne prikaze obrisane
             InitializeComponent();
             
-            view.Filter = Filter;
-            dgNamestaj.ItemsSource = view;
+            view.Filter = Filter; 
+            dgNamestaj.ItemsSource = view; 
 
 
             if (Projekat.Instance.ulogovaniKorisnik.TipKorisnika == TipKorisnika.Prodavac)
@@ -43,7 +43,7 @@ namespace POP31_MILOS_GUI.Prozori
         {
             if (((Namestaj)obj).Obrisan == false)
             {
-                var text = ((ComboBoxItem)cbIzbor.SelectedItem).Content.ToString(); //uzimammo text iz cb
+                var text = ((ComboBoxItem)cbIzbor.SelectedItem).Content.ToString(); 
                 if (text.Equals("Tip"))
                 {
                     return ((Namestaj)obj).TipNamestaja.Naziv.IndexOf(tbPretraga.Text, StringComparison.OrdinalIgnoreCase) >= 0;

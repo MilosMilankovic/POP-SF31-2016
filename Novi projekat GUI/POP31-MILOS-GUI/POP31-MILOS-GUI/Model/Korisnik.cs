@@ -26,20 +26,7 @@ namespace POP_31.Model
         {
 
         }
-
-        public Korisnik(string ime, string prezime, string korisnickoIme, string lozinka, TipKorisnika tipKorisnika)
-        {
-            this.Id = Projekat.Instance.Korisnici.Count;
-            this.Ime = ime;
-            this.Prezime = prezime;
-            this.KorisnickoIme = korisnickoIme;
-            this.Lozinka = lozinka;
-            this.TipKorisnika = tipKorisnika;
-            this.Obrisan = false;
-        }
         
-
-
         private int id;
 
         public int Id
@@ -103,7 +90,7 @@ namespace POP_31.Model
         }
         
 
-        private TipKorisnika tipKorisnika;
+        private TipKorisnika tipKorisnika;  
 
         public TipKorisnika TipKorisnika
         {
@@ -149,7 +136,7 @@ namespace POP_31.Model
             this.Obrisan = source.Obrisan;
         }
 
-        public static Korisnik GetById(int id)
+        public static Korisnik GetById(int id)  
         {
             foreach( Korisnik korisnik in Projekat.Instance.Korisnici)
             {

@@ -22,11 +22,11 @@ namespace POP31_MILOS_GUI.Prozori
     {
 
        
-        public SalonProzor()
+        public SalonProzor()  
         {
             InitializeComponent();
 
-            tbAdresa.DataContext = Projekat.Instance.Salon;
+            tbAdresa.DataContext = Projekat.Instance.Salon; 
             tbAdresaSajta.DataContext = Projekat.Instance.Salon;
             tbMaticniBroj.DataContext = Projekat.Instance.Salon;
             tbNaziv.DataContext = Projekat.Instance.Salon;
@@ -36,7 +36,7 @@ namespace POP31_MILOS_GUI.Prozori
 
 
 
-            if (Projekat.Instance.ulogovaniKorisnik.TipKorisnika == TipKorisnika.Prodavac)
+            if (Projekat.Instance.ulogovaniKorisnik.TipKorisnika == TipKorisnika.Prodavac) 
             {
                 
                 btnIzmeni.IsEnabled = false;
@@ -44,7 +44,7 @@ namespace POP31_MILOS_GUI.Prozori
             }
         }
 
-        private void btnIzmeni_Click(object sender, RoutedEventArgs e)
+        private void btnIzmeni_Click(object sender, RoutedEventArgs e) 
         {
             SalonEditProzor prozor = new SalonEditProzor();
             prozor.Show();

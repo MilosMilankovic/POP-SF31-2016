@@ -120,7 +120,6 @@ C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj
 C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\TicketWindow.g.cs
 C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\TicketWindow.baml
 C:\Users\koOoomp\Desktop\POP31-MILOS-GUI (2)\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csprojResolveAssemblyReference.cache
-C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.g.cs
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\LogInWindow.g.cs
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\App.g.cs
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI_Content.g.cs
@@ -129,7 +128,6 @@ C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe.config
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.exe
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\bin\Debug\POP31-MILOS-GUI.pdb
-C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\AddWindow.baml
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\LogInWindow.baml
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.g.resources
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31_MILOS_GUI.Properties.Resources.resources
@@ -137,8 +135,6 @@ C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.csproj.CoreCompileInputs.cache
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.exe
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\POP31-MILOS-GUI.pdb
-C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\Akcija.g.cs
-C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Windows\Akcija.baml
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Prozori\GlavniProzor.g.cs
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Prozori\GlavniProzor.baml
 C:\Users\koOoomp\Desktop\POP\POP-SF31-2016\Novi projekat GUI\POP31-MILOS-GUI\POP31-MILOS-GUI\obj\Debug\Prozori\NamestajProzor.g.cs

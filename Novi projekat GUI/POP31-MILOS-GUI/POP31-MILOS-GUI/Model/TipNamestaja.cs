@@ -15,7 +15,7 @@ namespace POP_31.Model
 
     public class TipNamestaja : INotifyPropertyChanged
     {
-        public string naziv;
+        public string naziv;      
         private int id;
         private bool obrisan;
 
@@ -23,15 +23,8 @@ namespace POP_31.Model
         {
            
         }
-
-        public TipNamestaja(string naziv)
-        {
-            this.Id = Projekat.Instance.TipNamestaja.Count;
-            this.Naziv = naziv;
-            this.Obrisan = false;
-        }
-
-        public int Id
+        
+        public int Id   
         {
             get { return id; }
             set
@@ -57,11 +50,11 @@ namespace POP_31.Model
             set
             {
                 naziv = value;
-                OnPropertyChanged("Naziv");
+                OnPropertyChanged("Naziv");  
             }
         }
 
-        public static TipNamestaja GetById(int id)
+        public static TipNamestaja GetById(int id)  
         {
             foreach (TipNamestaja tip in Projekat.Instance.TipNamestaja)
             {
@@ -73,7 +66,7 @@ namespace POP_31.Model
             return null;
         }
 
-        public void Copy(TipNamestaja source)
+        public void Copy(TipNamestaja source)   
         {
             this.Naziv = source.Naziv;
             this.Id = source.Id;
@@ -112,18 +105,18 @@ namespace POP_31.Model
                 da.SelectCommand = cmd;
                 da.Fill(ds, "TipNamestaja");
 
-                foreach (DataRow row in ds.Tables["TipNamestaja"].Rows)
+                foreach (DataRow row in ds.Tables["TipNamestaja"].Rows)  
                 {
-                    TipNamestaja tn = new TipNamestaja()
+                    TipNamestaja tn = new TipNamestaja()  
                     {
                         Id = Convert.ToInt32(row["Id"]),
                         Naziv = row["Naziv"].ToString(),
                         Obrisan = bool.Parse(row["Obrisan"].ToString())
                     };
-                    tipoviNamestaja.Add(tn);
+                    tipoviNamestaja.Add(tn); 
                 }
             }
-            return tipoviNamestaja;
+            return tipoviNamestaja; 
         }
 
         public static TipNamestaja Create(TipNamestaja tn)
@@ -143,7 +136,7 @@ namespace POP_31.Model
             }
 
 
-            Projekat.Instance.TipNamestaja.Add(tn);
+            Projekat.Instance.TipNamestaja.Add(tn); 
 
             return tn;
         }

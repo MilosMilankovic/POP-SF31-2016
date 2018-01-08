@@ -27,8 +27,7 @@ namespace POP31_MILOS_GUI.Windows
         public LogInWindow()
         {
             InitializeComponent();
-            userTB.Text = "Milos123";
-            passTB.Text = "milos";
+            
 
         }
 

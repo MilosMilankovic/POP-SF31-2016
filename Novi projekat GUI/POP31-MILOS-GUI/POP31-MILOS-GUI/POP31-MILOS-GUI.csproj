@@ -110,9 +110,6 @@
       <DependentUpon>TipNamestajaProzor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Util\GenericSerializer.cs" />
-    <Compile Include="Windows\AddWindow.xaml.cs">
-      <DependentUpon>AddWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Windows\LogInWindow.xaml.cs">
       <DependentUpon>LogInWindow.xaml</DependentUpon>
     </Compile>
@@ -189,14 +186,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Prozori\TipNamestajaProzor.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\AddWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\Akcija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

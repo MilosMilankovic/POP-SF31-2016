@@ -111,11 +111,24 @@ namespace POP31_MILOS_GUI.Prozori
 
             if (tbKupac.Text !="" && tbBrojRacuna.Text !="" && (prodaja.listaParova.Count > 0 || prodaja.listaDodatnihUsluga.Count > 0))
             {
-
+                foreach (ParProdaja par in prodaja.listaParova)
+                {
+                    if (par.Kolicina > Namestaj.GetById(par.NamestajId).KolicinaUMagacinu) 
+                    {
+                        MessageBox.Show("Nema dovoljno namestaja na stanju.", "Greska");
+                        return;
+                    }
+                }
 
                 foreach (DodatnaUsluga usluga in prodaja.listaDodatnihUsluga)
                 {
                     prodaja.listaDodatnihUslugaID.Add(usluga.Id);
+                }
+
+                foreach (ParProdaja par in prodaja.listaParova)
+                {
+                    Namestaj.GetById(par.NamestajId).KolicinaUMagacinu -= par.Kolicina; 
+                    Namestaj.Update(par.Namestaj); 
                 }
 
                 Projekat.Instance.Prodaja.Add(prodaja);

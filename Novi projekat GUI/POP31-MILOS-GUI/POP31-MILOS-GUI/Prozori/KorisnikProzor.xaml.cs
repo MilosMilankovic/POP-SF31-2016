@@ -43,9 +43,9 @@ namespace POP31_MILOS_GUI.Prozori
         }
         private bool Filter(object obj)
         {
-            if (((Korisnik)obj).Obrisan == false)
+            if (((Korisnik)obj).Obrisan == false) 
             {
-                var text = ((ComboBoxItem)cbIzbor.SelectedItem).Content.ToString(); //uzimammo text iz cb
+                var text = ((ComboBoxItem)cbIzbor.SelectedItem).Content.ToString(); 
                 if (text.Equals("Ime"))
                 {
                     return ((Korisnik)obj).Ime.IndexOf(tbPretraga.Text, StringComparison.OrdinalIgnoreCase) >= 0;
