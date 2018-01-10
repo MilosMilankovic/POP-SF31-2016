@@ -65,7 +65,7 @@ namespace POP31_MILOS_GUI.Prozori
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
 
-            if (tbNaziv.Text !="" && double.TryParse(tbCena.Text, out var x) && x > 0 && int.TryParse(tbKolicina.Text, out var y) && tbSifra.Text !="" && cbTip.SelectedItem !=null)
+            if (tbNaziv.Text !="" && double.TryParse(tbCena.Text, out var x) && x > 0 && int.TryParse(tbKolicina.Text, out var y) && y > 0 && tbSifra.Text !="" && cbTip.SelectedItem !=null)
             {
 
 

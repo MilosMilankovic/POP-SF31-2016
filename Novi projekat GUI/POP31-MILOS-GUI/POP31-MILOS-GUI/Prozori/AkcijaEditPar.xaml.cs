@@ -65,7 +65,7 @@ namespace POP31_MILOS_GUI.Prozori
         }
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            if (cbNamestaj.SelectedItem !=null && double.TryParse(tbPopust.Text, out var x) && x >0 )
+            if (cbNamestaj.SelectedItem !=null && double.TryParse(tbPopust.Text, out var x) && x > 0 && x < 100)
             {
 
 
