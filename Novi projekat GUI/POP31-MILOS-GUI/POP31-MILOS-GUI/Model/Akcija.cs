@@ -177,7 +177,7 @@ namespace POP_31.Model
                 DataSet ds = new DataSet();
                 DataSet ds2 = new DataSet();
 
-                cmd.CommandText = "SELECT * FROM Akcija;";
+                cmd.CommandText = "SELECT * FROM Akcija Where Obrisan = 0;";
                 cmd2.CommandText = "Select * From NaAkciji;";
                 da.SelectCommand = cmd;
                 da.Fill(ds, "Akcija");

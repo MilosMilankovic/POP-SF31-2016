@@ -171,7 +171,7 @@ namespace POP_31.Model
                 SqlDataAdapter da = new SqlDataAdapter();
                 DataSet ds = new DataSet();
 
-                cmd.CommandText = "SELECT * FROM Namestaj;";
+                cmd.CommandText = "SELECT * FROM Namestaj Where Obrisan = 0;";
                 da.SelectCommand = cmd;
                 da.Fill(ds, "Namestaj");
 
