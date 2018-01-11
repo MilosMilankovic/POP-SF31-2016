@@ -62,7 +62,7 @@ namespace POP31_MILOS_GUI.Prozori
         private void btnDodaj_Click(object sender, RoutedEventArgs e)
         {
             AkcijaEditProzor prozor = new AkcijaEditProzor();
-            prozor.Show();
+            prozor.ShowDialog();
         }
 
         private void btnIzmeni_Click(object sender, RoutedEventArgs e)

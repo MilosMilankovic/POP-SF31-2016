@@ -75,7 +75,7 @@ namespace POP31_MILOS_GUI.Prozori
                 if (dgNamestaj.SelectedItem != null)
                 {
                     NamestajEditProzor prozor = new NamestajEditProzor((Namestaj)dgNamestaj.SelectedItem);
-                    prozor.Show();
+                    prozor.ShowDialog();
                     view.Refresh();
                 }
             }
@@ -85,7 +85,7 @@ namespace POP31_MILOS_GUI.Prozori
         {
             if(dgNamestaj.SelectedItem != null)
             {
-                ((Namestaj)dgNamestaj.SelectedItem).Obrisan = true;
+                Namestaj.Delete((Namestaj)dgNamestaj.SelectedItem);
                 view.Refresh();
             }
         }

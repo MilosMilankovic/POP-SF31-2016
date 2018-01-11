@@ -47,7 +47,7 @@ namespace POP31_MILOS_GUI.Prozori
         private void btnIzmeni_Click(object sender, RoutedEventArgs e) 
         {
             SalonEditProzor prozor = new SalonEditProzor();
-            prozor.Show();
+            prozor.ShowDialog();
 
         }
     }

@@ -30,7 +30,7 @@ namespace POP31_MILOS_GUI.Prozori
         private void btnDodaj_Click(object sender, RoutedEventArgs e)
         {
             NovaProdajaProzor prozor = new NovaProdajaProzor();
-            prozor.Show();
+            prozor.ShowDialog();
         }
 
         private void btnPrikazi_Click(object sender, RoutedEventArgs e)
@@ -40,7 +40,7 @@ namespace POP31_MILOS_GUI.Prozori
            if(dgProdaja.SelectedItem != null)
             {
                 NovaProdajaProzor prozor = new NovaProdajaProzor((ProdajaNamestaja)dgProdaja.SelectedItem);
-                prozor.Show();
+                prozor.ShowDialog();
             }
         }
     }

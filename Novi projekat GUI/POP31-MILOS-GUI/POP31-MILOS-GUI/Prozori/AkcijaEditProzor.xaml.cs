@@ -84,14 +84,14 @@ namespace POP31_MILOS_GUI.Prozori
             if (dgPar.SelectedItem != null)
             {
                 AkcijaEditPar prozor = new AkcijaEditPar((Par)dgPar.SelectedItem, akcijaCopy);
-                prozor.Show();
+                prozor.ShowDialog();
             }
         }
 
         private void btnDodaj_Click(object sender, RoutedEventArgs e)
         {
             AkcijaEditPar prozor = new AkcijaEditPar(akcijaCopy);
-            prozor.Show();
+            prozor.ShowDialog();
         }
 
         private void btnObrisi_Click(object sender, RoutedEventArgs e)

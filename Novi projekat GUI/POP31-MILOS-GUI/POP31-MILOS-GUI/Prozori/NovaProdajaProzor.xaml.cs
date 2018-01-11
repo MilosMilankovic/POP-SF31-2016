@@ -69,7 +69,7 @@ namespace POP31_MILOS_GUI.Prozori
         private void btnDodaj_Click(object sender, RoutedEventArgs e)
         {
             ProdajaNamestajProzor prozor = new ProdajaNamestajProzor(prodaja);
-            prozor.Show();
+            prozor.ShowDialog();
 
         }
 
@@ -80,7 +80,7 @@ namespace POP31_MILOS_GUI.Prozori
             if(dgPar.SelectedItem != null)
             {
                 ProdajaNamestajProzor prozor = new ProdajaNamestajProzor(((ParProdaja)dgPar.SelectedItem), prodaja);
-                prozor.Show();
+                prozor.ShowDialog();
             }
         }
 
@@ -95,7 +95,7 @@ namespace POP31_MILOS_GUI.Prozori
         private void btnUslugaDodaj_Click(object sender, RoutedEventArgs e)
         {
             ProdajaUslugaProzor prozor = new ProdajaUslugaProzor(prodaja);
-            prozor.Show();
+            prozor.ShowDialog();
         }
 
         private void btnUslugaObrisi_Click(object sender, RoutedEventArgs e)

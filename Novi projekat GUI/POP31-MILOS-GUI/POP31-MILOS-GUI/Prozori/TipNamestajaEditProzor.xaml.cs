@@ -30,6 +30,7 @@ namespace POP31_MILOS_GUI.Prozori
         Operacija operacija;
         TipNamestaja tipNamestaja;
         
+        
         public TipNamestajaEditProzor()  
         {
             InitializeComponent();
@@ -41,10 +42,12 @@ namespace POP31_MILOS_GUI.Prozori
         public TipNamestajaEditProzor(TipNamestaja tipNamestaja) 
         {
             InitializeComponent();
+            
             this.tipNamestaja = new TipNamestaja();
             this.tipNamestaja.Copy(tipNamestaja);
-           
-            tbNaziv.DataContext = tipNamestaja;
+
+            //tbNaziv.DataContext = tipNamestajaCopy;
+            tbNaziv.DataContext = this.tipNamestaja;
             operacija = Operacija.IZMENA;
         }
 
@@ -61,6 +64,7 @@ namespace POP31_MILOS_GUI.Prozori
                 else if (operacija == Operacija.IZMENA)
                 {
                     TipNamestaja.Update(tipNamestaja);
+                   
                 }
                 Close();
             }

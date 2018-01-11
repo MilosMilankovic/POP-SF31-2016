@@ -46,7 +46,7 @@ namespace POP31_MILOS_GUI.Prozori
         private void btnDodaj_Click(object sender, RoutedEventArgs e)
         {
             DodatnaUslugaEditProzor prozor = new DodatnaUslugaEditProzor();
-            prozor.Show();
+            prozor.ShowDialog();
 
         }
 
@@ -55,7 +55,7 @@ namespace POP31_MILOS_GUI.Prozori
             if (dgDodatnaUsluga.SelectedItem != null)
             {
                 DodatnaUslugaEditProzor prozor = new DodatnaUslugaEditProzor((DodatnaUsluga)dgDodatnaUsluga.SelectedItem);
-                prozor.Show();
+                prozor.ShowDialog();
 
             }
         }

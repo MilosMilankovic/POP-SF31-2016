@@ -58,7 +58,7 @@ namespace POP31_MILOS_GUI.Prozori
         private void btnDodaj_Click(object sender, RoutedEventArgs e)
         {
             TipNamestajaEditProzor widnowEdit = new TipNamestajaEditProzor();
-            widnowEdit.Show();
+            widnowEdit.ShowDialog();
         }
 
         private void btnIzmeni_Click(object sender, RoutedEventArgs e)
@@ -66,7 +66,10 @@ namespace POP31_MILOS_GUI.Prozori
             if (dgTipNamestaja.SelectedItem != null)
             {
                 TipNamestajaEditProzor widnowEdit = new TipNamestajaEditProzor((TipNamestaja)dgTipNamestaja.SelectedItem);
-                widnowEdit.Show();
+                widnowEdit.ShowDialog();
+                
+
+                
             }
             
         }

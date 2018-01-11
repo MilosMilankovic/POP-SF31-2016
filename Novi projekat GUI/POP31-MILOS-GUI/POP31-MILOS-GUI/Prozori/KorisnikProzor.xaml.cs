@@ -66,7 +66,7 @@ namespace POP31_MILOS_GUI.Prozori
         private void btnDodaj_Click(object sender, RoutedEventArgs e)
         {
             KorisnikEditProzor prozor = new KorisnikEditProzor();
-            prozor.Show();
+            prozor.ShowDialog();
         }
 
         private void btnIzmeni_Click(object sender, RoutedEventArgs e)
@@ -74,7 +74,7 @@ namespace POP31_MILOS_GUI.Prozori
             if(dgKorisnik.SelectedItem != null)
             {
                 KorisnikEditProzor prozor = new KorisnikEditProzor((Korisnik)dgKorisnik.SelectedItem);
-                prozor.Show();
+                prozor.ShowDialog();
             }
         }
 
